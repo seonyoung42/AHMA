@@ -17,6 +17,8 @@
 		2BC3D0BC271BEB36005D5E82 /* FacilitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0BB271BEB36005D5E82 /* FacilitiesViewController.swift */; };
 		2BC3D0BE271BEB50005D5E82 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0BD271BEB50005D5E82 /* UserViewController.swift */; };
 		2BC3D0C0271BEB66005D5E82 /* PoliciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0BF271BEB66005D5E82 /* PoliciesViewController.swift */; };
+		2BC3D0C2271C18C7005D5E82 /* FacilityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0C1271C18C7005D5E82 /* FacilityDetailViewController.swift */; };
+		2BC3D0C4271C2646005D5E82 /* BabySitterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0C3271C2646005D5E82 /* BabySitterDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		2BC3D0BB271BEB36005D5E82 /* FacilitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesViewController.swift; sourceTree = "<group>"; };
 		2BC3D0BD271BEB50005D5E82 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		2BC3D0BF271BEB66005D5E82 /* PoliciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliciesViewController.swift; sourceTree = "<group>"; };
+		2BC3D0C1271C18C7005D5E82 /* FacilityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityDetailViewController.swift; sourceTree = "<group>"; };
+		2BC3D0C3271C2646005D5E82 /* BabySitterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BabySitterDetailViewController.swift; path = AHMH/BabySitterDetailViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +92,9 @@
 			children = (
 				2BC3D0B7271BEA50005D5E82 /* HomeViewController.swift */,
 				2BC3D0BB271BEB36005D5E82 /* FacilitiesViewController.swift */,
+				2BC3D0C1271C18C7005D5E82 /* FacilityDetailViewController.swift */,
 				2BC3D0B9271BEAD7005D5E82 /* BabySitterViewController.swift */,
+				2BC3D0C3271C2646005D5E82 /* BabySitterDetailViewController.swift */,
 				2BC3D0BF271BEB66005D5E82 /* PoliciesViewController.swift */,
 				2BC3D0BD271BEB50005D5E82 /* UserViewController.swift */,
 			);
@@ -169,6 +175,8 @@
 				2BC3D0A1271BE343005D5E82 /* AppDelegate.swift in Sources */,
 				2BC3D0BA271BEAD7005D5E82 /* BabySitterViewController.swift in Sources */,
 				2BC3D0BC271BEB36005D5E82 /* FacilitiesViewController.swift in Sources */,
+				2BC3D0C2271C18C7005D5E82 /* FacilityDetailViewController.swift in Sources */,
+				2BC3D0C4271C2646005D5E82 /* BabySitterDetailViewController.swift in Sources */,
 				2BC3D0A3271BE343005D5E82 /* SceneDelegate.swift in Sources */,
 				2BC3D0C0271BEB66005D5E82 /* PoliciesViewController.swift in Sources */,
 				2BC3D0B8271BEA50005D5E82 /* HomeViewController.swift in Sources */,

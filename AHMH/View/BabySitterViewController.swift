@@ -7,23 +7,37 @@
 
 import UIKit
 
-class BabySitterViewController: UIViewController {
-
+class BabySitterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+   
+    
+    @IBOutlet var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        10
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "BabySitterCell", for: indexPath)
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let detailViewController = storyboard.instantiateViewController(identifier: "BabySitterDetailViewController") as? BabySitterDetailViewController else { return }
+        self.show(detailViewController, sender: nil)
+    }
 
+}
+
+class BabySitterCell : UITableViewCell {
+    @IBOutlet var babySitterImage: UIImageView!
+    
 }
