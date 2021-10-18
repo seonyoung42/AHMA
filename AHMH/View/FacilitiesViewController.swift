@@ -15,7 +15,8 @@ class FacilitiesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var location = "서울" {
         didSet {
-            countryName.text = location
+            self.navigationItem.title = location
+//            countryName.text = location
         }
     }
     
@@ -28,8 +29,13 @@ class FacilitiesViewController: UIViewController, UITableViewDelegate, UITableVi
     
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
-        self.countryName.text = location
+        self.tableView.separatorStyle = .none
+        self.tableView.showsVerticalScrollIndicator = false
+        self.tableView.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
+
+
+        self.navigationItem.title = location
+//        self.countryName.text = location
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,7 +55,12 @@ class FacilitiesViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        150
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         guard let detailViewController = storyboard.instantiateViewController(identifier: "FacilityDetailViewController") as? FacilityDetailViewController else { return }
 //        detailViewController.facilityImage =
@@ -89,7 +100,8 @@ extension FacilitiesViewController : CLLocationManagerDelegate {
         
         // 경도, 위도 값을 지역으로 변환
         let geocorder = CLGeocoder()
-        geocorder.reverseGeocodeLocation(first) { (placemarks, error) in
+        let locale = Locale(identifier: "Ko-kr")
+        geocorder.reverseGeocodeLocation(first, preferredLocale: locale) { (placemarks, error) in
             
             if error != nil {
                 print("Error in reverseGeocodeLocation")
@@ -115,4 +127,39 @@ class FacilityCell : UITableViewCell {
     @IBOutlet var facilityName: UILabel!
     @IBOutlet var facilityAddress: UILabel!
     @IBOutlet var facilityPeriod: UILabel!
+    @IBOutlet var cellView: UIView!
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
+        
+//        self.cellView.layer.borderWidth = 2
+//        self.cellView.layer.borderColor = CGColor(red: 255/255, green: 146/255, blue: 146/255, alpha: 1)
+        self.cellView.layer.cornerRadius = 30
+        
+        
+//        contentView.layer.shadowColor = UIColor.black.cgColor
+        contentView.layer.shadowOpacity = 0.3
+        contentView.layer.shouldRasterize = true
+        contentView.layer.shadowOffset = CGSize(width: 3, height: 3)
+        contentView.layer.shadowRadius = 10
+//        contentView.layer.cornerRadius = 10
+        contentView.layer.masksToBounds = false
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15))
+
+        contentView.layer.borderWidth = 2
+        contentView.layer.borderColor = CGColor(red: 255/255, green: 146/255, blue: 146/255, alpha: 1)
+        contentView.layer.cornerRadius = 30
+    }
+    
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        if selected {
+                contentView.layer.borderWidth = 2
+                contentView.layer.borderColor = CGColor(red: 196/255, green: 234/255, blue: 218/255, alpha: 1)
+            } else {
+                contentView.layer.borderWidth = 2
+                contentView.layer.borderColor = CGColor(red: 255/255, green: 146/255, blue: 146/255, alpha: 1)
+            }
+    }
 }

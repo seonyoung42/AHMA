@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         
 //        let email = Auth.auth().currentUser?.email ?? "고객"
-        var email = Auth.auth().currentUser?.displayName!
+        let email = Auth.auth().currentUser?.displayName!
         
         
         welcomeLabel.text = """

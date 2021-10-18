@@ -17,11 +17,19 @@ class BabySitterViewController: UIViewController, UITableViewDelegate, UITableVi
 
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.separatorStyle = .none
+        self.tableView.showsVerticalScrollIndicator = false
+        self.tableView.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         10
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        180
+    }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "BabySitterCell", for: indexPath)
@@ -38,6 +46,25 @@ class BabySitterViewController: UIViewController, UITableViewDelegate, UITableVi
 }
 
 class BabySitterCell : UITableViewCell {
+    
     @IBOutlet var babySitterImage: UIImageView!
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
+
+        
+        contentView.layer.shadowOpacity = 0.3
+        contentView.layer.shouldRasterize = true
+        contentView.layer.shadowOffset = CGSize(width: 3, height: 3)
+        contentView.layer.shadowRadius = 10
+        contentView.layer.masksToBounds = false
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15))
+
+        contentView.layer.borderWidth = 2
+        contentView.layer.borderColor = CGColor(red: 196/255, green: 234/255, blue: 218/255, alpha: 1)
+        contentView.layer.cornerRadius = 30
+    }
+    
+   
 }

@@ -13,14 +13,15 @@ import CryptoKit
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet var emailLoginButton: UIButton!
     @IBOutlet var googleLoginButton: GIDSignInButton!
     @IBOutlet var appleLoginButton: UIButton!
+    @IBOutlet var contentLabel: UILabel!
     
     private var currentNonce: String?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        view.backgroundColor = UIColor(cgColor: CGColor(red: 255/255, green: 230/255, blue: 153/255, alpha: 1))
         navigationController?.navigationBar.isHidden = true
         
         //Google Sign In
@@ -30,12 +31,12 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        [emailLoginButton,googleLoginButton,appleLoginButton].forEach {
-            $0?.layer.borderWidth = 1
-            $0?.layer.borderColor = UIColor.white.cgColor
+        [googleLoginButton,appleLoginButton].forEach {
+            $0?.layer.borderWidth = 2
+            $0?.layer.borderColor = CGColor(red: 255/255, green: 146/255, blue: 146/255, alpha: 1)
             $0?.layer.cornerRadius = 30
         }
-       
+        
     }
     
     @IBAction func googleLoginButtonTapped(_ sender: Any) {
