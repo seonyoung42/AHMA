@@ -1,0 +1,6 @@
+framework module Pods_AHMH {
+  umbrella header "Pods-AHMH-umbrella.h"
+
+  export *
+  module * { export * }
+}

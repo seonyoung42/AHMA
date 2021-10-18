@@ -15,7 +15,7 @@ class FacilitiesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var location = "서울" {
         didSet {
-            countryName.text = "\(location)"
+            countryName.text = location
         }
     }
     
@@ -28,15 +28,14 @@ class FacilitiesViewController: UIViewController, UITableViewDelegate, UITableVi
     
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        self.countryName.text = location
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         locationManager.delegate = self
-//        locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
-//        locationManager.startUpdatingLocation()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,46 +59,9 @@ class FacilitiesViewController: UIViewController, UITableViewDelegate, UITableVi
         self.show(detailViewController, sender: nil)
     }
     
-//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        guard let first = locations.first else {
-//            return
-//        }
-//
-//        print(first.coordinate.longitude)
-//        print(first.coordinate.latitude)
-//
-//        let geocorder = CLGeocoder()
-//        geocorder.reverseGeocodeLocation(first) { (placemarks, error) in
-//
-//            if error != nil {
-//                print("Error in reverseGeocodeLocation")
-//            }
-//
-//            let placemark = placemarks! as [CLPlacemark]
-//            if placemark.count > 0 {
-//                let placemark = placemarks![0]
-//
-//                let locality = placemark.locality ?? ""
-//                let administrativeArea = placemark.administrativeArea ?? ""
-//                let country = placemark.country ?? ""
-//
-//                self.location = "\(locality), \(administrativeArea), \(country)"
-//                print("Address: \(locality), \(administrativeArea), \(country)")
-//            }
-//        }
-//
-//    }
-//    func congfigureLocationServices() {
-//
-//        let status = locationManager.authorizationStatus
-//
-//        if status == .notDetermined {
-//            locationManager.requestAlwaysAuthorization()
-//        } else if status == .authorizedAlways || status == .authorizedWhenInUse {
-//            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//            locationManager.startUpdatingLocation()
-//        }
-//    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        2
+    }
 }
 
 

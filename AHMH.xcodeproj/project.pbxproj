@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,9 +19,13 @@
 		2BC3D0C0271BEB66005D5E82 /* PoliciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0BF271BEB66005D5E82 /* PoliciesViewController.swift */; };
 		2BC3D0C2271C18C7005D5E82 /* FacilityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0C1271C18C7005D5E82 /* FacilityDetailViewController.swift */; };
 		2BC3D0C4271C2646005D5E82 /* BabySitterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0C3271C2646005D5E82 /* BabySitterDetailViewController.swift */; };
+		2BC3D0CB271D3958005D5E82 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0CA271D3958005D5E82 /* LoginViewController.swift */; };
+		2BC3D0CD271D3D6A005D5E82 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BC3D0CC271D3D6A005D5E82 /* GoogleService-Info.plist */; };
+		9B9054F7E43649DB8CDE9203 /* Pods_AHMH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B486BF7E598D9E66C37107C2 /* Pods_AHMH.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12C972148B9E42FBD5ACBA25 /* Pods-AHMH.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AHMH.debug.xcconfig"; path = "Target Support Files/Pods-AHMH/Pods-AHMH.debug.xcconfig"; sourceTree = "<group>"; };
 		2BC3D09D271BE343005D5E82 /* AHMH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AHMH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC3D0A0271BE343005D5E82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BC3D0A2271BE343005D5E82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +40,11 @@
 		2BC3D0BF271BEB66005D5E82 /* PoliciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliciesViewController.swift; sourceTree = "<group>"; };
 		2BC3D0C1271C18C7005D5E82 /* FacilityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityDetailViewController.swift; sourceTree = "<group>"; };
 		2BC3D0C3271C2646005D5E82 /* BabySitterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BabySitterDetailViewController.swift; path = AHMH/BabySitterDetailViewController.swift; sourceTree = SOURCE_ROOT; };
+		2BC3D0CA271D3958005D5E82 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2BC3D0CC271D3D6A005D5E82 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2BC3D0CE271D48D5005D5E82 /* AHMH.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AHMH.entitlements; sourceTree = "<group>"; };
+		B486BF7E598D9E66C37107C2 /* Pods_AHMH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AHMH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5CF62A1E619DCFB162C3231 /* Pods-AHMH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AHMH.release.xcconfig"; path = "Target Support Files/Pods-AHMH/Pods-AHMH.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +52,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B9054F7E43649DB8CDE9203 /* Pods_AHMH.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		140C8098DE559EAFF348B168 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B486BF7E598D9E66C37107C2 /* Pods_AHMH.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		16B1D494E45142960B866FD3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12C972148B9E42FBD5ACBA25 /* Pods-AHMH.debug.xcconfig */,
+				C5CF62A1E619DCFB162C3231 /* Pods-AHMH.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		2BC3D094271BE343005D5E82 = {
 			isa = PBXGroup;
 			children = (
 				2BC3D09F271BE343005D5E82 /* AHMH */,
 				2BC3D09E271BE343005D5E82 /* Products */,
+				16B1D494E45142960B866FD3 /* Pods */,
+				140C8098DE559EAFF348B168 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +97,8 @@
 		2BC3D09F271BE343005D5E82 /* AHMH */ = {
 			isa = PBXGroup;
 			children = (
+				2BC3D0CE271D48D5005D5E82 /* AHMH.entitlements */,
+				2BC3D0C9271D394A005D5E82 /* Login */,
 				2BC3D0B4271BEA06005D5E82 /* Model */,
 				2BC3D0B6271BEA19005D5E82 /* View */,
 				2BC3D0A0271BE343005D5E82 /* AppDelegate.swift */,
@@ -76,6 +107,7 @@
 				2BC3D0A9271BE345005D5E82 /* Assets.xcassets */,
 				2BC3D0AB271BE345005D5E82 /* LaunchScreen.storyboard */,
 				2BC3D0AE271BE345005D5E82 /* Info.plist */,
+				2BC3D0CC271D3D6A005D5E82 /* GoogleService-Info.plist */,
 			);
 			path = AHMH;
 			sourceTree = "<group>";
@@ -101,6 +133,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2BC3D0C9271D394A005D5E82 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2BC3D0CA271D3958005D5E82 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -108,9 +148,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BC3D0B1271BE345005D5E82 /* Build configuration list for PBXNativeTarget "AHMH" */;
 			buildPhases = (
+				5C4BA185D8383050D126D2A4 /* [CP] Check Pods Manifest.lock */,
 				2BC3D099271BE343005D5E82 /* Sources */,
 				2BC3D09A271BE343005D5E82 /* Frameworks */,
 				2BC3D09B271BE343005D5E82 /* Resources */,
+				E3EA8B1893FC33788BD73547 /* [CP] Embed Pods Frameworks */,
+				5E0F07C5A6C410C7068EFC74 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,12 +202,72 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BC3D0AD271BE345005D5E82 /* LaunchScreen.storyboard in Resources */,
+				2BC3D0CD271D3D6A005D5E82 /* GoogleService-Info.plist in Resources */,
 				2BC3D0AA271BE345005D5E82 /* Assets.xcassets in Resources */,
 				2BC3D0A8271BE343005D5E82 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C4BA185D8383050D126D2A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AHMH-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E0F07C5A6C410C7068EFC74 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AHMH/Pods-AHMH-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AHMH/Pods-AHMH-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AHMH/Pods-AHMH-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3EA8B1893FC33788BD73547 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AHMH/Pods-AHMH-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AHMH/Pods-AHMH-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AHMH/Pods-AHMH-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2BC3D099271BE343005D5E82 /* Sources */ = {
@@ -179,6 +282,7 @@
 				2BC3D0C4271C2646005D5E82 /* BabySitterDetailViewController.swift in Sources */,
 				2BC3D0A3271BE343005D5E82 /* SceneDelegate.swift in Sources */,
 				2BC3D0C0271BEB66005D5E82 /* PoliciesViewController.swift in Sources */,
+				2BC3D0CB271D3958005D5E82 /* LoginViewController.swift in Sources */,
 				2BC3D0B8271BEA50005D5E82 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,7 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -311,7 +415,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -323,9 +427,11 @@
 		};
 		2BC3D0B2271BE345005D5E82 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12C972148B9E42FBD5ACBA25 /* Pods-AHMH.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AHMH/AHMH.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Q6MH57SWY;
 				INFOPLIST_FILE = AHMH/Info.plist;
@@ -342,9 +448,11 @@
 		};
 		2BC3D0B3271BE345005D5E82 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5CF62A1E619DCFB162C3231 /* Pods-AHMH.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AHMH/AHMH.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Q6MH57SWY;
 				INFOPLIST_FILE = AHMH/Info.plist;
