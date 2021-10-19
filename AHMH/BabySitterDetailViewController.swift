@@ -15,7 +15,6 @@ class BabySitterDetailViewController: UIViewController {
         super.viewDidLoad()
         
         messageButton.addTarget(self, action: #selector(messageButtonTapped), for: .touchUpInside)
-        
     }
 
     @objc func messageButtonTapped() {

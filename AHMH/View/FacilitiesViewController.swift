@@ -13,7 +13,7 @@ class FacilitiesViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet var tableView: UITableView!
     @IBOutlet var countryName: UILabel!
     
-    var location = "서울" {
+    var location = "서울, 관악구" {
         didSet {
             self.navigationItem.title = location
         }

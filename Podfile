@@ -10,6 +10,7 @@ target 'AHMH' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
   pod 'GoogleSignIn', '~> 5.0'
 
   pod 'MessageKit'

@@ -53,6 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         guard let authentication = user.authentication else {
             return
         }
+        
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
         
         Auth.auth().signIn(with: credential) { [self] _, _ in
@@ -61,13 +62,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             print("Did sign in with Google: \(user)")
             
             guard let email = user.profile.email,
-//                  let firstName = user.profile.email,
                   let firstName = user.profile.givenName,
                   let lastName = user.profile.familyName else {
                 return
             }
             
-            DatabaseManager.shared.insetUser(with: ChatAppUser(firstName: firstName, lastName: lastName, emailAddress: email))
+            UserDefaults.standard.set(email, forKey: "email")
+            
+            let chatUser = ChatAppUser(firstName: firstName, lastName: lastName, emailAddress: email)
+            DatabaseManager.shared.insetUser(with: chatUser, completion: { success in
+                if success {
+                    
+                    // upload image
+                    if user.profile.hasImage {
+                        guard let url = user.profile.imageURL(withDimension: 200) else {
+                            return
+                        }
+                        
+                        URLSession.shared.dataTask(with: url, completionHandler: { data, _, _ in
+                            guard let data = data else {
+                                return
+                            }
+                            
+                            let filename = chatUser.profilePictureFileName
+                            StorageManager.shared.uploadProfilePicture(with: data, fileName: filename, completion: {
+                                result in
+                                switch result {
+                                case .success(let downloadUrl):
+                                    UserDefaults.standard.set(downloadUrl, forKey: "profile_picture_url")
+                                    print(downloadUrl)
+                                case .failure(let error):
+                                    print("Storage manager error: \(error)")
+                                }
+                            })
+                        }).resume()
+                        
+                        
+                    }
+                    
+                   
+                }
+                
+            })
         }
     }
     

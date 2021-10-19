@@ -14,6 +14,11 @@ final class DatabaseManager {
     
     private let database = Database.database().reference()
     
+    static func safeEmail(emailAddress: String) -> String {
+        var safeEmail = emailAddress.replacingOccurrences(of: "@", with: "-")
+        safeEmail = safeEmail.replacingOccurrences(of: ".", with: "-")
+        return safeEmail
+    }
     
 }
 
@@ -35,12 +40,18 @@ extension DatabaseManager {
     
     
     // Insert new user to database
-    public func insetUser(with user: ChatAppUser) {
+    public func insetUser(with user: ChatAppUser, completion: @escaping(Bool) -> Void) {
         database.child(user.safeEmail).setValue([
             "firstName" : user.firstName,
             "lastName" : user.lastName
-//            "displayName": user.displayName
-        ])
+        ], withCompletionBlock: { error, _ in
+            guard error == nil else {
+                print("failed to insert user to database")
+                completion(false)
+                return
+            }
+            completion(true)
+        })
     }
 }
 
@@ -48,12 +59,15 @@ extension DatabaseManager {
 struct ChatAppUser {
     let firstName : String
     let lastName : String
-//    let displayName: String
     let emailAddress: String
 //    let profilePictureURL: String
     var safeEmail : String {
         var safeEmail = emailAddress.replacingOccurrences(of: "@", with: "-")
         safeEmail = safeEmail.replacingOccurrences(of: ".", with: "-")
         return safeEmail
+    }
+    
+    var profilePictureFileName: String {
+        return "\(safeEmail)_profile_picture.png"
     }
 }

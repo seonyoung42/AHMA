@@ -90,8 +90,15 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
                     return
                 }
                 
+                let chatUser = ChatAppUser(firstName: firstName, lastName: lastName, emailAddress: email)
+                DatabaseManager.shared.insetUser(with: chatUser, completion: { success in
+                    if success {
+                        // upload image
+                        
+                    }
+                    
+                })
                 
-                DatabaseManager.shared.insetUser(with: ChatAppUser(firstName: firstName, lastName: lastName, emailAddress: email))
                 // User is signed in to Firebase with Apple.
                 // ...
                 ///Tabbar (main) 화면으로 보내기
