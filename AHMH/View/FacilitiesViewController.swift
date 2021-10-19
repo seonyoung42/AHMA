@@ -16,7 +16,6 @@ class FacilitiesViewController: UIViewController, UITableViewDelegate, UITableVi
     var location = "서울" {
         didSet {
             self.navigationItem.title = location
-//            countryName.text = location
         }
     }
     
@@ -26,6 +25,7 @@ class FacilitiesViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         congfigureLocationServices()
+//        view.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
     
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -35,6 +35,8 @@ class FacilitiesViewController: UIViewController, UITableViewDelegate, UITableVi
 
 
         self.navigationItem.title = location
+        self.navigationController?.navigationBar.barTintColor = UIColor(cgColor: CGColor(red: 252/255, green: 243/255, blue: 202/255, alpha: 1))
+            
 //        self.countryName.text = location
     }
     
@@ -68,6 +70,7 @@ class FacilitiesViewController: UIViewController, UITableViewDelegate, UITableVi
 //        detailViewController.ref = self.ref
 //        detailViewController.diaryCount = self.diaryList.count
         self.show(detailViewController, sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -115,8 +118,10 @@ extension FacilitiesViewController : CLLocationManagerDelegate {
                 let administrativeArea = placemark.administrativeArea ?? ""
                 let country = placemark.country ?? ""
                 
-                self.location = "\(locality), \(administrativeArea), \(country)"
+//                self.location = "\(locality), \(administrativeArea), \(country)"
+                self.location = "\(locality), \(administrativeArea)"
                 print("Address: \(locality), \(administrativeArea), \(country)")
+                
             }
         }
     }
@@ -150,16 +155,7 @@ class FacilityCell : UITableViewCell {
         contentView.layer.borderWidth = 2
         contentView.layer.borderColor = CGColor(red: 255/255, green: 146/255, blue: 146/255, alpha: 1)
         contentView.layer.cornerRadius = 30
+        
     }
     
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        if selected {
-                contentView.layer.borderWidth = 2
-                contentView.layer.borderColor = CGColor(red: 196/255, green: 234/255, blue: 218/255, alpha: 1)
-            } else {
-                contentView.layer.borderWidth = 2
-                contentView.layer.borderColor = CGColor(red: 255/255, green: 146/255, blue: 146/255, alpha: 1)
-            }
-    }
 }

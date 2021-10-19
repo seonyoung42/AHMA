@@ -41,6 +41,7 @@ class BabySitterViewController: UIViewController, UITableViewDelegate, UITableVi
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         guard let detailViewController = storyboard.instantiateViewController(identifier: "BabySitterDetailViewController") as? BabySitterDetailViewController else { return }
         self.show(detailViewController, sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
 }

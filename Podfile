@@ -7,6 +7,14 @@ target 'AHMH' do
 
   # Pods for AHMH
   pod 'Firebase/Auth'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
   pod 'GoogleSignIn', '~> 5.0'
 
+  pod 'MessageKit'
+  pod 'JGProgressHUD'
+  pod 'RealmSwift'
+  pod 'SDWebImage'
+  
 end

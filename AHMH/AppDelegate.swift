@@ -11,6 +11,7 @@ import GoogleSignIn
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -56,6 +57,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         Auth.auth().signIn(with: credential) { [self] _, _ in
             showMainViewController()
+//            let email = Auth.auth().currentUser?.email
+            print("Did sign in with Google: \(user)")
+            
+            guard let email = user.profile.email,
+//                  let firstName = user.profile.email,
+                  let firstName = user.profile.givenName,
+                  let lastName = user.profile.familyName else {
+                return
+            }
+            
+            DatabaseManager.shared.insetUser(with: ChatAppUser(firstName: firstName, lastName: lastName, emailAddress: email))
         }
     }
     

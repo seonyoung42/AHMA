@@ -16,11 +16,16 @@
 		2BC3D0BA271BEAD7005D5E82 /* BabySitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0B9271BEAD7005D5E82 /* BabySitterViewController.swift */; };
 		2BC3D0BC271BEB36005D5E82 /* FacilitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0BB271BEB36005D5E82 /* FacilitiesViewController.swift */; };
 		2BC3D0BE271BEB50005D5E82 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0BD271BEB50005D5E82 /* UserViewController.swift */; };
-		2BC3D0C0271BEB66005D5E82 /* PoliciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0BF271BEB66005D5E82 /* PoliciesViewController.swift */; };
 		2BC3D0C2271C18C7005D5E82 /* FacilityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0C1271C18C7005D5E82 /* FacilityDetailViewController.swift */; };
 		2BC3D0C4271C2646005D5E82 /* BabySitterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0C3271C2646005D5E82 /* BabySitterDetailViewController.swift */; };
 		2BC3D0CB271D3958005D5E82 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0CA271D3958005D5E82 /* LoginViewController.swift */; };
 		2BC3D0CD271D3D6A005D5E82 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BC3D0CC271D3D6A005D5E82 /* GoogleService-Info.plist */; };
+		2BC3D0D3271E8832005D5E82 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0D2271E8832005D5E82 /* Chat.swift */; };
+		2BC3D0D5271E883D005D5E82 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0D4271E883D005D5E82 /* Message.swift */; };
+		2BC3D0D7271E88BF005D5E82 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0D6271E88BF005D5E82 /* ChatViewController.swift */; };
+		2BC3D0D9271E8964005D5E82 /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0D8271E8964005D5E82 /* ChatUser.swift */; };
+		2BC3D0DB271E8D45005D5E82 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0DA271E8D45005D5E82 /* ChatListViewController.swift */; };
+		2BC3D0DD271E9744005D5E82 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0DC271E9744005D5E82 /* DatabaseManager.swift */; };
 		9B9054F7E43649DB8CDE9203 /* Pods_AHMH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B486BF7E598D9E66C37107C2 /* Pods_AHMH.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,12 +42,17 @@
 		2BC3D0B9271BEAD7005D5E82 /* BabySitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabySitterViewController.swift; sourceTree = "<group>"; };
 		2BC3D0BB271BEB36005D5E82 /* FacilitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesViewController.swift; sourceTree = "<group>"; };
 		2BC3D0BD271BEB50005D5E82 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
-		2BC3D0BF271BEB66005D5E82 /* PoliciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliciesViewController.swift; sourceTree = "<group>"; };
 		2BC3D0C1271C18C7005D5E82 /* FacilityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityDetailViewController.swift; sourceTree = "<group>"; };
 		2BC3D0C3271C2646005D5E82 /* BabySitterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BabySitterDetailViewController.swift; path = AHMH/BabySitterDetailViewController.swift; sourceTree = SOURCE_ROOT; };
 		2BC3D0CA271D3958005D5E82 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2BC3D0CC271D3D6A005D5E82 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2BC3D0CE271D48D5005D5E82 /* AHMH.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AHMH.entitlements; sourceTree = "<group>"; };
+		2BC3D0D2271E8832005D5E82 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		2BC3D0D4271E883D005D5E82 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		2BC3D0D6271E88BF005D5E82 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		2BC3D0D8271E8964005D5E82 /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
+		2BC3D0DA271E8D45005D5E82 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		2BC3D0DC271E9744005D5E82 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		B486BF7E598D9E66C37107C2 /* Pods_AHMH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AHMH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5CF62A1E619DCFB162C3231 /* Pods-AHMH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AHMH.release.xcconfig"; path = "Target Support Files/Pods-AHMH/Pods-AHMH.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +107,7 @@
 		2BC3D09F271BE343005D5E82 /* AHMH */ = {
 			isa = PBXGroup;
 			children = (
+				2BC3D0D1271E877A005D5E82 /* Chat */,
 				2BC3D0CE271D48D5005D5E82 /* AHMH.entitlements */,
 				2BC3D0C9271D394A005D5E82 /* Login */,
 				2BC3D0B4271BEA06005D5E82 /* Model */,
@@ -115,6 +126,7 @@
 		2BC3D0B4271BEA06005D5E82 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2BC3D0DC271E9744005D5E82 /* DatabaseManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -127,7 +139,6 @@
 				2BC3D0C1271C18C7005D5E82 /* FacilityDetailViewController.swift */,
 				2BC3D0B9271BEAD7005D5E82 /* BabySitterViewController.swift */,
 				2BC3D0C3271C2646005D5E82 /* BabySitterDetailViewController.swift */,
-				2BC3D0BF271BEB66005D5E82 /* PoliciesViewController.swift */,
 				2BC3D0BD271BEB50005D5E82 /* UserViewController.swift */,
 			);
 			path = View;
@@ -139,6 +150,18 @@
 				2BC3D0CA271D3958005D5E82 /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		2BC3D0D1271E877A005D5E82 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				2BC3D0D2271E8832005D5E82 /* Chat.swift */,
+				2BC3D0DA271E8D45005D5E82 /* ChatListViewController.swift */,
+				2BC3D0D8271E8964005D5E82 /* ChatUser.swift */,
+				2BC3D0D6271E88BF005D5E82 /* ChatViewController.swift */,
+				2BC3D0D4271E883D005D5E82 /* Message.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,13 +299,18 @@
 			files = (
 				2BC3D0BE271BEB50005D5E82 /* UserViewController.swift in Sources */,
 				2BC3D0A1271BE343005D5E82 /* AppDelegate.swift in Sources */,
+				2BC3D0DD271E9744005D5E82 /* DatabaseManager.swift in Sources */,
 				2BC3D0BA271BEAD7005D5E82 /* BabySitterViewController.swift in Sources */,
 				2BC3D0BC271BEB36005D5E82 /* FacilitiesViewController.swift in Sources */,
+				2BC3D0DB271E8D45005D5E82 /* ChatListViewController.swift in Sources */,
 				2BC3D0C2271C18C7005D5E82 /* FacilityDetailViewController.swift in Sources */,
+				2BC3D0D3271E8832005D5E82 /* Chat.swift in Sources */,
 				2BC3D0C4271C2646005D5E82 /* BabySitterDetailViewController.swift in Sources */,
 				2BC3D0A3271BE343005D5E82 /* SceneDelegate.swift in Sources */,
-				2BC3D0C0271BEB66005D5E82 /* PoliciesViewController.swift in Sources */,
+				2BC3D0D9271E8964005D5E82 /* ChatUser.swift in Sources */,
+				2BC3D0D5271E883D005D5E82 /* Message.swift in Sources */,
 				2BC3D0CB271D3958005D5E82 /* LoginViewController.swift in Sources */,
+				2BC3D0D7271E88BF005D5E82 /* ChatViewController.swift in Sources */,
 				2BC3D0B8271BEA50005D5E82 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

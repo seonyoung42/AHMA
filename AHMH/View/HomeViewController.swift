@@ -22,12 +22,18 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        let email = Auth.auth().currentUser?.email ?? "고객"
-        let email = Auth.auth().currentUser?.displayName!
+        var email = Auth.auth().currentUser?.email ?? "고객"
+//        let email = Auth.auth().currentUser?.displayName!
         
+        if Auth.auth().currentUser?.displayName != nil {
+            email = (Auth.auth().currentUser?.displayName)!
+        } else {
+            email = Auth.auth().currentUser?.email ?? "고객"
+        }
         
         welcomeLabel.text = """
-        안녕하세요 \(email)님
+        안녕하세요
+        \(email)님
         """
         
         welcomeLabel.textColor = UIColor.black

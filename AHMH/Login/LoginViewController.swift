@@ -10,6 +10,7 @@ import GoogleSignIn
 import FirebaseAuth
 import AuthenticationServices
 import CryptoKit
+import JGProgressHUD
 
 class LoginViewController: UIViewController {
     
@@ -17,7 +18,9 @@ class LoginViewController: UIViewController {
     @IBOutlet var appleLoginButton: UIButton!
     @IBOutlet var contentLabel: UILabel!
     
+
     private var currentNonce: String?
+    private let spinner = JGProgressHUD(style: .dark)
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -40,11 +43,19 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func googleLoginButtonTapped(_ sender: Any) {
+        spinner.show(in: view)
         GIDSignIn.sharedInstance().signIn()
+        DispatchQueue.main.async { [self] in
+            spinner.dismiss()
+        }
     }
     
     @IBAction func appleLoginButtonTapped(_ sender: Any) {
+        spinner.show(in: view)
         startSignInWithAppleFlow()
+        DispatchQueue.main.async { [self] in
+            spinner.dismiss()
+        }
     }
     
 }
@@ -71,6 +82,16 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
                     print ("Error Apple sign in: %@", error)
                     return
                 }
+                
+                guard let email = Auth.auth().currentUser?.email,
+                      let name = appleIDCredential.fullName,
+                      let firstName = name.givenName,
+                      let lastName = name.familyName else {
+                    return
+                }
+                
+                
+                DatabaseManager.shared.insetUser(with: ChatAppUser(firstName: firstName, lastName: lastName, emailAddress: email))
                 // User is signed in to Firebase with Apple.
                 // ...
                 ///Tabbar (main) 화면으로 보내기

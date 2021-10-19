@@ -14,6 +14,13 @@ class BabySitterDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        messageButton.addTarget(self, action: #selector(messageButtonTapped), for: .touchUpInside)
+        
     }
 
+    @objc func messageButtonTapped() {
+        let vc = ChatViewController()
+        let navVC = UINavigationController(rootViewController: vc)
+        present(navVC, animated: true, completion: nil)
+    }
 }
