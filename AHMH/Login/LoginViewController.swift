@@ -44,6 +44,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func googleLoginButtonTapped(_ sender: Any) {
         spinner.show(in: view)
+       
         GIDSignIn.sharedInstance().signIn()
         DispatchQueue.main.async { [self] in
             spinner.dismiss()
@@ -57,6 +58,7 @@ class LoginViewController: UIViewController {
             spinner.dismiss()
         }
     }
+    
     
 }
 

@@ -57,6 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
         
         Auth.auth().signIn(with: credential) { [self] _, _ in
+            
             showMainViewController()
 //            let email = Auth.auth().currentUser?.email
             print("Did sign in with Google: \(user)")
