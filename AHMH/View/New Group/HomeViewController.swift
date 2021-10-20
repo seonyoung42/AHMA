@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet var welcomeLabel: UILabel!
     @IBOutlet var communityCollectionView: UICollectionView!
-    
+    @IBOutlet var bookCollectionView: UICollectionView!
     
     var communities : [CommunityCategory] = [
         .init(id: "id1", name: "0~2세", image: (UIImage(named: "baby-1")?.pngData())!),
@@ -21,12 +21,26 @@ class HomeViewController: UIViewController {
         .init(id: "id1", name: "9~11세", image: (UIImage(named: "baby-1")?.pngData())!)
     ]
     
+    var books: [Book] = [
+        .init(id: "id1", title: "일단 시작해 봐!: 이명랑 청소년 소설", author: "지은이: 이명랑 그림: 뻑새", image: (UIImage(named: "baby-1")?.pngData())!),
+        .init(id: "id1", title: "일단 시작해 봐!: 이명랑 청소년 소설", author: "지은이: 이명랑 그림: 뻑새", image: (UIImage(named: "baby-1")?.pngData())!),
+        .init(id: "id1", title: "일단 시작해 봐!: 이명랑 청소년 소설", author: "지은이: 이명랑 그림: 뻑새", image: (UIImage(named: "baby-1")?.pngData())!),
+        .init(id: "id1", title: "일단 시작해 봐!: 이명랑 청소년 소설", author: "지은이: 이명랑 그림: 뻑새", image: (UIImage(named: "baby-1")?.pngData())!),
+        .init(id: "id1", title: "일단 시작해 봐!: 이명랑 청소년 소설", author: "지은이: 이명랑 그림: 뻑새", image: (UIImage(named: "baby-1")?.pngData())!)
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
         
         self.navigationItem.title = "AHMH"
+        self.navigationController?.navigationBar.barTintColor = UIColor(cgColor: CGColor(red: 252/255, green: 243/255, blue: 202/255, alpha: 1))
+        
         self.communityCollectionView.delegate = self
         self.communityCollectionView.dataSource = self
+        
+        self.bookCollectionView.delegate = self
+        self.bookCollectionView.dataSource = self
         
         registerCells()
 
@@ -35,6 +49,7 @@ class HomeViewController: UIViewController {
     
     private func registerCells() {
         communityCollectionView.register(UINib(nibName: CommunityCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: CommunityCollectionViewCell.identifier)
+        bookCollectionView.register(UINib(nibName: BookCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: BookCollectionViewCell.identifier)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -71,13 +86,37 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return communities.count
+        
+        switch collectionView {
+        case communityCollectionView:
+            return communities.count
+        case bookCollectionView:
+            return books.count
+        default:
+            return 0
+        }
+    
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CommunityCollectionViewCell.identifier, for: indexPath) as! CommunityCollectionViewCell
-        cell.setup(category: communities[indexPath.row])
-        return cell
+        
+        switch collectionView {
+        
+        case communityCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CommunityCollectionViewCell.identifier, for: indexPath) as! CommunityCollectionViewCell
+            cell.setup(category: communities[indexPath.row])
+            return cell
+           
+        case bookCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookCollectionViewCell.identifier, for: indexPath) as! BookCollectionViewCell
+            cell.setup(book: books[indexPath.row])
+            return cell
+            
+        default:
+            return UICollectionViewCell()
+        }
+        
+       
     }
     
     

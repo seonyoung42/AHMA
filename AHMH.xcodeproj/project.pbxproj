@@ -31,6 +31,9 @@
 		2BC3D0E5271FC514005D5E82 /* CommunityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BC3D0E3271FC514005D5E82 /* CommunityCollectionViewCell.xib */; };
 		2BC3D0E7271FC692005D5E82 /* CommunityCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0E6271FC692005D5E82 /* CommunityCategory.swift */; };
 		2BC3D0E9271FCBB4005D5E82 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0E8271FCBB3005D5E82 /* CardView.swift */; };
+		2BC3D0EC271FEBE9005D5E82 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0EA271FEBE9005D5E82 /* BookCollectionViewCell.swift */; };
+		2BC3D0ED271FEBE9005D5E82 /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BC3D0EB271FEBE9005D5E82 /* BookCollectionViewCell.xib */; };
+		2BC3D0EF271FF8C2005D5E82 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0EE271FF8C2005D5E82 /* Book.swift */; };
 		9B9054F7E43649DB8CDE9203 /* Pods_AHMH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B486BF7E598D9E66C37107C2 /* Pods_AHMH.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +66,9 @@
 		2BC3D0E3271FC514005D5E82 /* CommunityCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityCollectionViewCell.xib; sourceTree = "<group>"; };
 		2BC3D0E6271FC692005D5E82 /* CommunityCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCategory.swift; sourceTree = "<group>"; };
 		2BC3D0E8271FCBB3005D5E82 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		2BC3D0EA271FEBE9005D5E82 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
+		2BC3D0EB271FEBE9005D5E82 /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
+		2BC3D0EE271FF8C2005D5E82 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		B486BF7E598D9E66C37107C2 /* Pods_AHMH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AHMH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5CF62A1E619DCFB162C3231 /* Pods-AHMH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AHMH.release.xcconfig"; path = "Target Support Files/Pods-AHMH/Pods-AHMH.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +145,7 @@
 				2BC3D0DC271E9744005D5E82 /* DatabaseManager.swift */,
 				2BC3D0DE271EC103005D5E82 /* StorageManager.swift */,
 				2BC3D0E6271FC692005D5E82 /* CommunityCategory.swift */,
+				2BC3D0EE271FF8C2005D5E82 /* Book.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,6 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				2BC3D0B7271BEA50005D5E82 /* HomeViewController.swift */,
+				2BC3D0EA271FEBE9005D5E82 /* BookCollectionViewCell.swift */,
+				2BC3D0EB271FEBE9005D5E82 /* BookCollectionViewCell.xib */,
 				2BC3D0E2271FC514005D5E82 /* CommunityCollectionViewCell.swift */,
 				2BC3D0E3271FC514005D5E82 /* CommunityCollectionViewCell.xib */,
 				2BC3D0E8271FCBB3005D5E82 /* CardView.swift */,
@@ -248,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BC3D0E5271FC514005D5E82 /* CommunityCollectionViewCell.xib in Resources */,
+				2BC3D0ED271FEBE9005D5E82 /* BookCollectionViewCell.xib in Resources */,
 				2BC3D0AD271BE345005D5E82 /* LaunchScreen.storyboard in Resources */,
 				2BC3D0CD271D3D6A005D5E82 /* GoogleService-Info.plist in Resources */,
 				2BC3D0AA271BE345005D5E82 /* Assets.xcassets in Resources */,
@@ -323,6 +333,7 @@
 			files = (
 				2BC3D0BE271BEB50005D5E82 /* UserViewController.swift in Sources */,
 				2BC3D0A1271BE343005D5E82 /* AppDelegate.swift in Sources */,
+				2BC3D0EF271FF8C2005D5E82 /* Book.swift in Sources */,
 				2BC3D0DD271E9744005D5E82 /* DatabaseManager.swift in Sources */,
 				2BC3D0BA271BEAD7005D5E82 /* BabySitterViewController.swift in Sources */,
 				2BC3D0BC271BEB36005D5E82 /* FacilitiesViewController.swift in Sources */,
@@ -334,6 +345,7 @@
 				2BC3D0C4271C2646005D5E82 /* BabySitterDetailViewController.swift in Sources */,
 				2BC3D0A3271BE343005D5E82 /* SceneDelegate.swift in Sources */,
 				2BC3D0D9271E8964005D5E82 /* ChatUser.swift in Sources */,
+				2BC3D0EC271FEBE9005D5E82 /* BookCollectionViewCell.swift in Sources */,
 				2BC3D0D5271E883D005D5E82 /* Message.swift in Sources */,
 				2BC3D0CB271D3958005D5E82 /* LoginViewController.swift in Sources */,
 				2BC3D0E4271FC514005D5E82 /* CommunityCollectionViewCell.swift in Sources */,

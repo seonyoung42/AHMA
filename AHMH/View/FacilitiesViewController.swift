@@ -143,11 +143,18 @@ class FacilityCell : UITableViewCell {
         self.cellView.layer.cornerRadius = 30
         
         
+//        layer.shadowColor = UIColor.black.cgColor
+//        layer.shadowOffset = .zero
+//        layer.cornerRadius = 10
+//        layer.shadowOpacity = 0.1
+//
+//
+        
 //        contentView.layer.shadowColor = UIColor.black.cgColor
-        contentView.layer.shadowOpacity = 0.3
+        contentView.layer.shadowOpacity = 0.1
         contentView.layer.shouldRasterize = true
-        contentView.layer.shadowOffset = CGSize(width: 3, height: 3)
-        contentView.layer.shadowRadius = 10
+        contentView.layer.shadowOffset = .zero
+//        contentView.layer.shadowRadius = 10
 //        contentView.layer.cornerRadius = 10
         contentView.layer.masksToBounds = false
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15))
