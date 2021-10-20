@@ -14,23 +14,32 @@ class UserViewController: UIViewController {
     
     @IBOutlet var profileImage: UIImageView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        createUserProfile()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
+        self.navigationController?.navigationBar.barTintColor = UIColor(cgColor: CGColor(red: 252/255, green: 243/255, blue: 202/255, alpha: 1))
+        self.navigationItem.title = "내 정보"
         
         profileImage.contentMode = .scaleAspectFill
         profileImage.backgroundColor = .white
         profileImage.layer.borderWidth = 3
-        profileImage.layer.borderColor = UIColor.blue.cgColor
+        profileImage.layer.borderColor = UIColor(cgColor: CGColor(red: 255/255, green: 171/255, blue: 115/255, alpha: 1)).cgColor
+        
         profileImage.layer.masksToBounds = true
         profileImage.layer.cornerRadius = profileImage.bounds.width/2
-        
-        createUserProfile()
+                
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.badge.xmark"), style: .plain, target: self, action: #selector(logout))
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func logoutButtonTapped(_ sender: Any) {
-        
+    @objc func logout() {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
@@ -38,6 +47,18 @@ class UserViewController: UIViewController {
         } catch let signOutError as NSError {
             print("ERROR: signout \(signOutError.localizedDescription)")
         }
+    }
+    
+    //
+    @IBAction func logoutButtonTapped(_ sender: Any) {
+        
+//        let firebaseAuth = Auth.auth()
+//        do {
+//            try firebaseAuth.signOut()
+//            self.navigationController?.popToRootViewController(animated: true)
+//        } catch let signOutError as NSError {
+//            print("ERROR: signout \(signOutError.localizedDescription)")
+//        }
     }
     
    
@@ -67,7 +88,6 @@ class UserViewController: UIViewController {
                 print("Failed to get download url: \(error)")
             }
         })
-        
     }
     
     func downloadImage(imageView: UIImageView, url: URL) {
