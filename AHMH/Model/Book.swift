@@ -9,7 +9,9 @@ import Foundation
 
 struct Book {
     
-    let id,title, author: String?
-    let image: Data
+    let title, imageURL, author, publisher, pages, year, recommender, description : String?
+    
+//    let id,title, author: String?
+//    let image: Data
     
 }

@@ -16,8 +16,8 @@ class BookCollectionViewCell: UICollectionViewCell {
     @IBOutlet var BookAuthor: UILabel!
     
     func setup(book: Book) {
-        BookTitle.text = book.title
-        BookAuthor.text = book.author
-        BookImageView.image = UIImage(data: book.image)
+//        BookTitle.text = book.title
+//        BookAuthor.text = book.author
+//        BookImageView.image = UIImage(data: book.image)
     }
 }

@@ -161,8 +161,49 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         default:
             return UICollectionViewCell()
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-       
+        if segue.identifier == "showBookDetail" {
+            let secondVC = segue.destination as? BookDetailViewController
+            secondVC?.book = sender as! [Any]
+            
+        }
+//        guard let secondVC = segue.destination as? BookDetailViewController else { return }
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        switch collectionView {
+
+        case bookCollectionView:
+            
+            let sender = bookList[indexPath.row]
+            
+            performSegue(withIdentifier: "showBookDetail", sender: sender)
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookCollectionViewCell.identifier, for: indexPath) as! BookCollectionViewCell
+            
+            
+            let url = URL(string: bookList[indexPath.row][1])
+            do {
+                let data = try Data(contentsOf: url!)
+                cell.BookImageView.image = UIImage(data: data)
+            } catch {
+                print("Error loading Image by URL")
+            }
+           
+            cell.BookTitle.text = bookList[indexPath.row][0]
+            cell.BookAuthor.text = bookList[indexPath.row][2]
+            
+            
+        default:
+          print("select cell")
+        }
+        
+        
     }
     
     
