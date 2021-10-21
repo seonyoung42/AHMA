@@ -15,22 +15,23 @@ class BookDetailViewController: UIViewController {
     @IBOutlet var bookPublisher: UILabel!
     @IBOutlet var bookPages: UILabel!
     @IBOutlet var bookYear: UILabel!
-    @IBOutlet var bookDescription: UILabel!
-    var book : [Any] = []
+    
+    @IBOutlet var bookDescription: UITextView!
+    var book : [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
         
         // 이름, 이미지url, 저자, 출판사, 총 페이지, 출판 년도, 소개글
-        bookTitle.text = book[0] as! String
-        bookAuthor.text = book[2] as! String
-        bookPublisher.text = book[3] as! String
-        bookPages.text = book[4] as! String
-        bookYear.text = book[5] as! String
-        bookDescription.text = book[7] as! String
+        bookTitle.text = book[0]
+        bookAuthor.text = book[2]
+        bookPublisher.text = book[3]
+        bookPages.text = book[4]
+        bookYear.text = book[5]
+        bookDescription.text = book[7]
         
-        let url = URL(string: book[1] as! String)
+        let url = URL(string: book[1])
         do {
             let data = try Data(contentsOf: url!)
             bookImageView.image = UIImage(data: data)

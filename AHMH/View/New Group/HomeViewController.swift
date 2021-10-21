@@ -15,10 +15,10 @@ class HomeViewController: UIViewController {
     @IBOutlet var bookCollectionView: UICollectionView!
     
     var communities : [CommunityCategory] = [
-        .init(id: "id1", name: "0~2세", image: (UIImage(named: "baby-1")?.pngData())!),
-        .init(id: "id1", name: "3~5세", image: (UIImage(named: "baby-1")?.pngData())!),
-        .init(id: "id1", name: "6~8세", image: (UIImage(named: "baby-1")?.pngData())!),
-        .init(id: "id1", name: "9~11세", image: (UIImage(named: "baby-1")?.pngData())!)
+        .init(id: "id1", name: "0~2세", image: (UIImage(named: "0-1")?.pngData())!),
+        .init(id: "id1", name: "3~5세", image: (UIImage(named: "3-1")?.pngData())!),
+        .init(id: "id1", name: "6~8세", image: (UIImage(named: "6-1")?.pngData())!),
+        .init(id: "id1", name: "9~11세", image: (UIImage(named: "9-1")?.pngData())!)
     ]
     
 //    var books: [Book] = [
@@ -71,9 +71,9 @@ class HomeViewController: UIViewController {
                     
                 for item in dataArr {
                     bookList.append(item)
-                    
                 }
             }
+            
         } catch {
             print("Error reading CSV file")
         }
@@ -118,6 +118,7 @@ class HomeViewController: UIViewController {
     }
 }
 
+// -> CollectionView
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -167,7 +168,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         if segue.identifier == "showBookDetail" {
             let secondVC = segue.destination as? BookDetailViewController
-            secondVC?.book = sender as! [Any]
+            secondVC?.book = sender as! [String]
             
         }
 //        guard let secondVC = segue.destination as? BookDetailViewController else { return }
@@ -180,6 +181,14 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
         case bookCollectionView:
             
+//            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//            guard let detailViewController = storyboard.instantiateViewController(identifier: "BookDetailViewController") as? BookDetailViewController else { return }
+//    //        detailViewController.facilityImage =
+//    //        detailViewController.diaryDetail = diaryList[indexPath.row]
+//    //        detailViewController.ref = self.ref
+//    //        detailViewController.diaryCount = self.diaryList.count
+//            self.show(detailViewController, sender: nil)
+//
             let sender = bookList[indexPath.row]
             
             performSegue(withIdentifier: "showBookDetail", sender: sender)
@@ -205,6 +214,5 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         
     }
-    
     
 }
