@@ -21,13 +21,17 @@ class HomeViewController: UIViewController {
         .init(id: "id1", name: "9~11세", image: (UIImage(named: "baby-1")?.pngData())!)
     ]
     
-    var books: [Book] = [
-        .init(id: "id1", title: "일단 시작해 봐!: 이명랑 청소년 소설", author: "지은이: 이명랑 그림: 뻑새", image: (UIImage(named: "baby-1")?.pngData())!),
-        .init(id: "id1", title: "일단 시작해 봐!: 이명랑 청소년 소설", author: "지은이: 이명랑 그림: 뻑새", image: (UIImage(named: "baby-1")?.pngData())!),
-        .init(id: "id1", title: "일단 시작해 봐!: 이명랑 청소년 소설", author: "지은이: 이명랑 그림: 뻑새", image: (UIImage(named: "baby-1")?.pngData())!),
-        .init(id: "id1", title: "일단 시작해 봐!: 이명랑 청소년 소설", author: "지은이: 이명랑 그림: 뻑새", image: (UIImage(named: "baby-1")?.pngData())!),
-        .init(id: "id1", title: "일단 시작해 봐!: 이명랑 청소년 소설", author: "지은이: 이명랑 그림: 뻑새", image: (UIImage(named: "baby-1")?.pngData())!)
-    ]
+//    var books: [Book] = [
+//        .init(id: "id1", title: "일단 시작해 봐!: 이명랑 청소년 소설", author: "지은이: 이명랑 그림: 뻑새", image: (UIImage(named: "baby-1")?.pngData())!),
+//        .init(id: "id1", title: "일단 시작해 봐!: 이명랑 청소년 소설", author: "지은이: 이명랑 그림: 뻑새", image: (UIImage(named: "baby-1")?.pngData())!),
+//        .init(id: "id1", title: "일단 시작해 봐!: 이명랑 청소년 소설", author: "지은이: 이명랑 그림: 뻑새", image: (UIImage(named: "baby-1")?.pngData())!),
+//        .init(id: "id1", title: "일단 시작해 봐!: 이명랑 청소년 소설", author: "지은이: 이명랑 그림: 뻑새", image: (UIImage(named: "baby-1")?.pngData())!),
+//        .init(id: "id1", title: "일단 시작해 봐!: 이명랑 청소년 소설", author: "지은이: 이명랑 그림: 뻑새", image: (UIImage(named: "baby-1")?.pngData())!)
+//    ]
+    
+    var bookList: [[String]] = []
+    
+    var dateString = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +40,10 @@ class HomeViewController: UIViewController {
         self.navigationItem.title = "AHMH"
         self.navigationController?.navigationBar.barTintColor = UIColor(cgColor: CGColor(red: 252/255, green: 243/255, blue: 202/255, alpha: 1))
         
+        let todayDate = DateFormatter()
+        todayDate.dateFormat = "yyyy년 MM월 dd일"
+        dateString = todayDate.string(from: Date())
+        
         self.communityCollectionView.delegate = self
         self.communityCollectionView.dataSource = self
         
@@ -43,13 +51,39 @@ class HomeViewController: UIViewController {
         self.bookCollectionView.dataSource = self
         
         registerCells()
+        loadBookListFromCSV()
 
-        // Do any additional setup after loading the view.
     }
     
     private func registerCells() {
+        
         communityCollectionView.register(UINib(nibName: CommunityCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: CommunityCollectionViewCell.identifier)
         bookCollectionView.register(UINib(nibName: BookCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: BookCollectionViewCell.identifier)
+    }
+    
+    // - Parse CSV File
+    private func parseCSVAt(url:URL) {
+        do {
+            let data = try Data(contentsOf: url)
+            let dataEncoded = String(data: data, encoding: .utf8)
+                
+            if let dataArr = dataEncoded?.components(separatedBy: "\n").map({$0.components(separatedBy: ",")}) {
+                    
+                for item in dataArr {
+                    bookList.append(item)
+                    
+                }
+            }
+        } catch {
+            print("Error reading CSV file")
+        }
+    }
+    
+    // - Load Data from Parsed CSV File
+    private func loadBookListFromCSV() {
+        let path = Bundle.main.path(forResource: "children_book", ofType: "csv")!
+        parseCSVAt(url: URL(fileURLWithPath: path))
+        bookCollectionView.reloadData()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -64,8 +98,8 @@ class HomeViewController: UIViewController {
         }
         
         welcomeLabel.text = """
-        안녕하세요
         \(email)님
+        환영합니다 🥰
         """
         
         welcomeLabel.textColor = UIColor.black
@@ -91,7 +125,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case communityCollectionView:
             return communities.count
         case bookCollectionView:
-            return books.count
+            return bookList.count
         default:
             return 0
         }
@@ -109,7 +143,19 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
            
         case bookCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookCollectionViewCell.identifier, for: indexPath) as! BookCollectionViewCell
-            cell.setup(book: books[indexPath.row])
+            
+            
+            let url = URL(string: bookList[indexPath.row][1])
+            do {
+                let data = try Data(contentsOf: url!)
+                cell.BookImageView.image = UIImage(data: data)
+            } catch {
+                print("Error loading Image by URL")
+            }
+           
+            cell.BookTitle.text = bookList[indexPath.row][0]
+            cell.BookAuthor.text = bookList[indexPath.row][2]
+            
             return cell
             
         default:
