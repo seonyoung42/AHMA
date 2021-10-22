@@ -59,6 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         Auth.auth().signIn(with: credential) { [self] _, _ in
             
             showMainViewController()
+//            pushNewView()
 //            let email = Auth.auth().currentUser?.email
             print("Did sign in with Google: \(user)")
             
@@ -111,10 +112,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     private func showMainViewController() {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let mainViewController = storyboard.instantiateViewController(identifier: "TabbarController")
-        mainViewController.modalPresentationStyle = .fullScreen
+//        mainViewController.modalPresentationStyle = .fullScreen
+        
         UIApplication.shared.windows.first?.rootViewController?.show(mainViewController, sender: nil)
+
     }
-    
 
 }
 

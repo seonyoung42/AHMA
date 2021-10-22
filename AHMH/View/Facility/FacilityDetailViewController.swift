@@ -38,8 +38,6 @@ class FacilityDetailViewController: UIViewController {
         facilityName.text = name
         facilityAddress.text = adrress
         
-//        setAnnotation(latitudeValue: 37.3826616, longitudeValue: 126.840719, delta: 0.1, title: name, subtitle: adrress)
-        
         setAnnotation(latitudeValue: Double(latitude)!, longitudeValue: Double(longitude)! , delta: 0.1, title: name, subtitle: adrress)
        
     }

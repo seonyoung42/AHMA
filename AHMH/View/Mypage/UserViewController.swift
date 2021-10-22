@@ -13,7 +13,11 @@ class UserViewController: UIViewController {
     
     
     @IBOutlet var profileImage: UIImageView!
-    
+    @IBOutlet var locationButton: UIButton!
+    @IBOutlet var babySitterButton: UIButton!
+    @IBOutlet var logoutButton: UIButton!
+    @IBOutlet var profileBackView: CardView!
+    @IBOutlet var buttonsBackView: CardView!
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         createUserProfile()
@@ -33,25 +37,25 @@ class UserViewController: UIViewController {
         
         profileImage.layer.masksToBounds = true
         profileImage.layer.cornerRadius = profileImage.bounds.width/2
+        
+        profileBackView.layer.cornerRadius = profileBackView.bounds.width/2
                 
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.badge.xmark"), style: .plain, target: self, action: #selector(logout))
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.badge.xmark"), style: .plain, target: self, action: #selector(logout))
+        
+        [locationButton,babySitterButton,logoutButton].forEach {
+            
+            $0?.layer.borderWidth = 2
+            $0?.layer.borderColor = CGColor(red: 255/255, green: 171/255, blue: 115/255, alpha: 1)
+            $0?.layer.cornerRadius = 20
+            
+            buttonsBackView.layer.cornerRadius = 20
+        }
+        
 
         // Do any additional setup after loading the view.
     }
     
-    @objc func logout() {
-        let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
-            self.navigationController?.popToRootViewController(animated: true)
-        } catch let signOutError as NSError {
-            print("ERROR: signout \(signOutError.localizedDescription)")
-        }
-    }
-    
-    //
-    @IBAction func logoutButtonTapped(_ sender: Any) {
-        
+//    @objc func logout() {
 //        let firebaseAuth = Auth.auth()
 //        do {
 //            try firebaseAuth.signOut()
@@ -59,6 +63,19 @@ class UserViewController: UIViewController {
 //        } catch let signOutError as NSError {
 //            print("ERROR: signout \(signOutError.localizedDescription)")
 //        }
+//    }
+    
+
+    @IBAction func logoutButtonTapped(_ sender: Any) {
+        
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            print("Logout - success")
+            self.navigationController?.popToRootViewController(animated: true)
+        } catch let signOutError as NSError {
+            print("ERROR: signout \(signOutError.localizedDescription)")
+        }
     }
     
    

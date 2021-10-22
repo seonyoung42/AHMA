@@ -44,8 +44,8 @@ class OnboardingViewController: UIViewController {
 //            let controller = storyboard?.instantiateViewController(identifier: "LoginNC") as! UINavigationController
             let controller = storyboard?.instantiateViewController(identifier: "LoginViewController") as! LoginViewController
 //            controller.modalPresentationStyle = .fullScreen
-//            navigationController?.pushViewController(controller, animated: true)
-            present(controller, animated: true, completion: nil)
+            navigationController?.pushViewController(controller, animated: true)
+//            present(controller, animated: true, completion: nil)
             print("Go to the next page")
         } else {
             currentPage += 1

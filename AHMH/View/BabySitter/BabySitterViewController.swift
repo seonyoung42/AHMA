@@ -20,6 +20,16 @@ class BabySitterViewController: UIViewController, UITableViewDelegate, UITableVi
         self.tableView.separatorStyle = .none
         self.tableView.showsVerticalScrollIndicator = false
         self.tableView.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
+        
+        let location = UserDefaults.standard.value(forKey: "위치")
+        
+        if location != nil {
+            self.navigationItem.title = location as! String
+        } else {
+            self.navigationItem.title = "위치 정보를 등록해주세요."
+        }
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor(cgColor: CGColor(red: 252/255, green: 243/255, blue: 202/255, alpha: 1))
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

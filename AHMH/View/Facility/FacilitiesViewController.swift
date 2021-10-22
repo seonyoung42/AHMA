@@ -6,28 +6,32 @@
 //
 
 import UIKit
-import CoreLocation
 
 class FacilitiesViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     @IBOutlet var countryName: UILabel!
     
-    var location = "서울, 관악구" {
-        didSet {
-            self.navigationItem.title = location
-        }
-    }
+//    var location = "서울, 관악구" {
+//        didSet {
+//            self.navigationItem.title = location
+//        }
+//    }
     
     var facilityList: [[String]] = []
     
-    var locationManager: CLLocationManager = CLLocationManager()
-    var currentLocation: CLLocationCoordinate2D!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        congfigureLocationServices()
 //        view.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
+        
+        let location = UserDefaults.standard.value(forKey: "위치")
+        
+        if location != nil {
+            self.navigationItem.title = location as! String
+        } else {
+            self.navigationItem.title = "위치 정보를 등록해주세요."
+        }
     
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -37,19 +41,11 @@ class FacilitiesViewController: UIViewController {
         self.tableView.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
 
 
-        self.navigationItem.title = location
         self.navigationController?.navigationBar.barTintColor = UIColor(cgColor: CGColor(red: 252/255, green: 243/255, blue: 202/255, alpha: 1))
             
         loadBookListFromCSV()
-//        self.countryName.text = location
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-    }
     
     // - Parse CSV File
     private func parseCSVAt(url:URL) {
@@ -62,7 +58,7 @@ class FacilitiesViewController: UIViewController {
                     
                 for item in dataArr {
                     facilityList.append(item)
-                    print("add facilityList")
+//                    print("add facilityList")
                 }
             }
             
@@ -134,54 +130,4 @@ extension FacilitiesViewController: UITableViewDelegate, UITableViewDataSource {
 //    func numberOfSections(in tableView: UITableView) -> Int {
 //        2
 //    }
-}
-
-
-
-extension FacilitiesViewController : CLLocationManagerDelegate {
-    
-    func congfigureLocationServices() {
-        
-        let status = locationManager.authorizationStatus
-        
-        if status == .notDetermined {
-            locationManager.requestAlwaysAuthorization()
-        } else if status == .authorizedAlways || status == .authorizedWhenInUse {
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startUpdatingLocation()
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let first = locations.first else {
-            return
-        }
-        
-        print(first.coordinate.longitude)
-        print(first.coordinate.latitude)
-        
-        // 경도, 위도 값을 지역으로 변환
-        let geocorder = CLGeocoder()
-        let locale = Locale(identifier: "Ko-kr")
-        geocorder.reverseGeocodeLocation(first, preferredLocale: locale) { (placemarks, error) in
-            
-            if error != nil {
-                print("Error in reverseGeocodeLocation")
-            }
-            
-            let placemark = placemarks! as [CLPlacemark]
-            if placemark.count > 0 {
-                let placemark = placemarks![0]
-                
-                let locality = placemark.locality ?? ""
-                let administrativeArea = placemark.administrativeArea ?? ""
-                let country = placemark.country ?? ""
-                
-//                self.location = "\(locality), \(administrativeArea), \(country)"
-                self.location = "\(locality), \(administrativeArea)"
-                print("Address: \(locality), \(administrativeArea), \(country)")
-                
-            }
-        }
-    }
 }

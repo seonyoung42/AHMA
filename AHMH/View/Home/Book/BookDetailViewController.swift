@@ -39,6 +39,21 @@ class BookDetailViewController: UIViewController {
             print("Error loading Image by URL")
         }
         
+//        [bookTitle,bookAuthor,bookPublisher,bookPages, bookYear, bookImageView].forEach {
+//            $0?.layer.shadowColor = UIColor.black.cgColor
+//            $0?.layer.shadowOffset = .zero
+//            $0?.layer.cornerRadius = 10
+//            $0?.layer.shadowOpacity = 0.1
+//            
+//            
+////            $0?.backgroundColor = UIColor.white
+////            $0?.layer.cornerRadius = 5
+////            $0?.layer.borderWidth = 2
+////            $0?.layer.borderColor = CGColor(red: 255/255, green: 171/255, blue: 115/255, alpha: 1)
+//        }
+        
+        bookDescription.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
+        
     }
 
 }

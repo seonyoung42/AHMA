@@ -40,9 +40,9 @@ class HomeViewController: UIViewController {
         self.navigationItem.title = "AHMH"
         self.navigationController?.navigationBar.barTintColor = UIColor(cgColor: CGColor(red: 252/255, green: 243/255, blue: 202/255, alpha: 1))
         
-        let todayDate = DateFormatter()
-        todayDate.dateFormat = "yyyy년 MM월 dd일"
-        dateString = todayDate.string(from: Date())
+//        let todayDate = DateFormatter()
+//        todayDate.dateFormat = "yyyy년 MM월 dd일"
+//        dateString = todayDate.string(from: Date())
         
         self.communityCollectionView.delegate = self
         self.communityCollectionView.dataSource = self
@@ -97,15 +97,16 @@ class HomeViewController: UIViewController {
             email = Auth.auth().currentUser?.email ?? "고객"
         }
         
-        welcomeLabel.text = """
-        \(email)님
-        환영합니다 🥰
-        """
-        
-        welcomeLabel.textColor = UIColor.black
+//        welcomeLabel.text = """
+//        \(email)님
+//        환영합니다 🥰
+//        """
+//
+//        welcomeLabel.textColor = UIColor.black
     }
     
     @IBAction func profileUpdateButtonTapped(_ sender: Any) {
+        
         let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
         changeRequest?.displayName = "선영"
         changeRequest?.commitChanges { _ in
