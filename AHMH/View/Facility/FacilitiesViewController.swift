@@ -10,17 +10,9 @@ import UIKit
 class FacilitiesViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var countryName: UILabel!
-    
-//    var location = "서울, 관악구" {
-//        didSet {
-//            self.navigationItem.title = location
-//        }
-//    }
     
     var facilityList: [[String]] = []
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
 //        view.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
@@ -78,7 +70,7 @@ class FacilitiesViewController: UIViewController {
    
 }
 
-
+// - 테이블 뷰
 extension FacilitiesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -119,10 +111,6 @@ extension FacilitiesViewController: UITableViewDelegate, UITableViewDataSource {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         guard let detailViewController = storyboard.instantiateViewController(identifier: "FacilityDetailViewController") as? FacilityDetailViewController else { return }
         detailViewController.facility = facilityList[indexPath.row]
-//        detailViewController.facilityImage =
-//        detailViewController.diaryDetail = diaryList[indexPath.row]
-//        detailViewController.ref = self.ref
-//        detailViewController.diaryCount = self.diaryList.count
         self.show(detailViewController, sender: nil)
         tableView.deselectRow(at: indexPath, animated: true)
     }

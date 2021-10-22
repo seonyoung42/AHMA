@@ -78,7 +78,7 @@
 		2BC3D0DA271E8D45005D5E82 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		2BC3D0DC271E9744005D5E82 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		2BC3D0DE271EC103005D5E82 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
-		2BC3D0E2271FC514005D5E82 /* CommunityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCollectionViewCell.swift; sourceTree = "<group>"; };
+		2BC3D0E2271FC514005D5E82 /* CommunityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CommunityCollectionViewCell.swift; path = "../New Group1/CommunityCollectionViewCell.swift"; sourceTree = "<group>"; };
 		2BC3D0E3271FC514005D5E82 /* CommunityCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityCollectionViewCell.xib; sourceTree = "<group>"; };
 		2BC3D0E6271FC692005D5E82 /* CommunityCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCategory.swift; sourceTree = "<group>"; };
 		2BC3D0E8271FCBB3005D5E82 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -130,6 +130,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		2B160DE92722F9BD00FEF84E /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				2BC3D0E2271FC514005D5E82 /* CommunityCollectionViewCell.swift */,
+				2BC3D0E3271FC514005D5E82 /* CommunityCollectionViewCell.xib */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
 		2BC3D094271BE343005D5E82 = {
 			isa = PBXGroup;
 			children = (
@@ -153,7 +162,6 @@
 			children = (
 				2BC3D0F7272009AF005D5E82 /* Extensions */,
 				2BC3D0CE271D48D5005D5E82 /* AHMH.entitlements */,
-				2BC3D0C9271D394A005D5E82 /* Login */,
 				2BC3D0B4271BEA06005D5E82 /* Model */,
 				2BC3D0B6271BEA19005D5E82 /* View */,
 				2BC3D0A0271BE343005D5E82 /* AppDelegate.swift */,
@@ -186,11 +194,12 @@
 		2BC3D0B6271BEA19005D5E82 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2BC3D11F27219A1A005D5E82 /* Mypage */,
-				2BC3D11E272199FF005D5E82 /* BabySitter */,
-				2BC3D117272142B3005D5E82 /* Facility */,
 				2BC3D0F427200766005D5E82 /* Onboarding */,
+				2BC3D0C9271D394A005D5E82 /* Login */,
 				2BC3D0E1271FBDA5005D5E82 /* Home */,
+				2BC3D117272142B3005D5E82 /* Facility */,
+				2BC3D11E272199FF005D5E82 /* BabySitter */,
+				2BC3D11F27219A1A005D5E82 /* Mypage */,
 				2BC3D0D1271E877A005D5E82 /* Chat */,
 			);
 			path = View;
@@ -219,12 +228,11 @@
 		2BC3D0E1271FBDA5005D5E82 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				2BC3D106272111EF005D5E82 /* Book */,
 				2BC3D0B7271BEA50005D5E82 /* HomeViewController.swift */,
+				2B160DE92722F9BD00FEF84E /* Community */,
+				2BC3D106272111EF005D5E82 /* Book */,
 				2BC3D0F0272006AE005D5E82 /* PolicyCollectionViewCell.swift */,
 				2BC3D0F1272006AE005D5E82 /* PolicyCollectionViewCell.xib */,
-				2BC3D0E2271FC514005D5E82 /* CommunityCollectionViewCell.swift */,
-				2BC3D0E3271FC514005D5E82 /* CommunityCollectionViewCell.xib */,
 				2BC3D0E8271FCBB3005D5E82 /* CardView.swift */,
 			);
 			path = Home;

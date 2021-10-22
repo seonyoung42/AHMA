@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AYv-ED-uEg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1160.8695652173915" y="780.80357142857144"/>
+            <point key="canvasLocation" x="-335" y="-115"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -287,7 +287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001.4492753623189" y="839.73214285714278"/>
+            <point key="canvasLocation" x="-574" y="840"/>
         </scene>
         <!--Book Detail View Controller-->
         <scene sceneID="UKn-VD-oVr">
@@ -384,7 +384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Xm-ve-HE0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="89.855072463768124" y="1607.8125"/>
+            <point key="canvasLocation" x="-575" y="1608"/>
         </scene>
         <!--Facilities View Controller-->
         <scene sceneID="dHj-MZ-EsQ">
@@ -486,7 +486,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="twB-xL-Mtz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3060.8695652173915" y="839.73214285714278"/>
+            <point key="canvasLocation" x="1000" y="840"/>
         </scene>
         <!--Facility Detail View Controller-->
         <scene sceneID="gWk-JL-K7i">
@@ -567,7 +567,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMv-e5-ZxJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2151" y="1635"/>
+            <point key="canvasLocation" x="1000" y="1608"/>
         </scene>
         <!--Baby Sitter View Controller-->
         <scene sceneID="WeA-Xc-jLS">
@@ -658,7 +658,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZi-te-5Og" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5033.3333333333339" y="888.61607142857144"/>
+            <point key="canvasLocation" x="2897" y="840"/>
         </scene>
         <!--Baby Sitter Detail View Controller-->
         <scene sceneID="vbc-hF-lkT">
@@ -668,10 +668,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9HD-lH-cap">
-                                <rect key="frame" x="371.5" y="64" width="22.5" height="22"/>
-                                <state key="normal" image="ellipsis.bubble" catalog="system"/>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="p79-L7-8QN">
                                 <rect key="frame" x="140" y="84" width="254" height="81.5"/>
                                 <subviews>
@@ -757,9 +753,7 @@
                         <constraints>
                             <constraint firstItem="3Zw-aE-zu5" firstAttribute="centerX" secondItem="HBw-qN-KDe" secondAttribute="centerX" id="0U8-Yc-uGX"/>
                             <constraint firstItem="exQ-uN-vES" firstAttribute="trailing" secondItem="p79-L7-8QN" secondAttribute="trailing" constant="20" id="5qQ-5Z-ODg"/>
-                            <constraint firstItem="9HD-lH-cap" firstAttribute="top" secondItem="exQ-uN-vES" secondAttribute="top" constant="20" id="SW9-2z-bLp"/>
                             <constraint firstItem="3Zw-aE-zu5" firstAttribute="top" secondItem="p79-L7-8QN" secondAttribute="bottom" constant="30" id="SvI-NY-qFS"/>
-                            <constraint firstItem="exQ-uN-vES" firstAttribute="trailing" secondItem="9HD-lH-cap" secondAttribute="trailing" constant="20" id="WbZ-1Y-IeU"/>
                             <constraint firstItem="p79-L7-8QN" firstAttribute="top" secondItem="exQ-uN-vES" secondAttribute="top" constant="40" id="XJN-gQ-lu9"/>
                             <constraint firstItem="p79-L7-8QN" firstAttribute="leading" secondItem="PQs-SQ-DsI" secondAttribute="trailing" constant="20" id="jaT-OE-s1c"/>
                             <constraint firstItem="3Zw-aE-zu5" firstAttribute="leading" secondItem="exQ-uN-vES" secondAttribute="leading" constant="20" id="rRI-cA-JyH"/>
@@ -767,13 +761,10 @@
                             <constraint firstItem="PQs-SQ-DsI" firstAttribute="leading" secondItem="exQ-uN-vES" secondAttribute="leading" constant="20" id="tn7-td-6zo"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="messageButton" destination="9HD-lH-cap" id="Rcf-TS-hpu"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EEk-pZ-Qpw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4123" y="1608"/>
+            <point key="canvasLocation" x="2896" y="1591"/>
         </scene>
         <!--Chat-->
         <scene sceneID="vPz-Fy-yom">
@@ -814,7 +805,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SlD-YT-UvE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7162.3188405797109" y="888.61607142857144"/>
+            <point key="canvasLocation" x="4836" y="840"/>
         </scene>
         <!--User View Controller-->
         <scene sceneID="3zV-z8-hDJ">
@@ -839,8 +830,11 @@
                                                 <state key="normal" title="내 위치 등록하기">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
-                                                    <segue destination="k4f-Oa-rPt" kind="show" id="KQO-SI-CSJ"/>
+                                                    <segue destination="k4f-Oa-rPt" kind="show" id="hVi-V3-n7L"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzP-Mz-N0d">
@@ -851,7 +845,11 @@
                                                 </constraints>
                                                 <state key="normal" title="돌봄이로 등록하기">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="bjr-ON-5zN" kind="show" id="8rw-dw-sqq"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIO-oo-cEk">
                                                 <rect key="frame" x="0.0" y="110" width="362" height="50"/>
@@ -922,7 +920,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hu-ug-wcD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9247.826086956522" y="888.61607142857144"/>
+            <point key="canvasLocation" x="6974" y="840"/>
         </scene>
         <!--Location View Controller-->
         <scene sceneID="3t7-R0-SOY">
@@ -974,7 +972,117 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GD9-NX-GjE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10148" y="888"/>
+            <point key="canvasLocation" x="6059" y="1696"/>
+        </scene>
+        <!--Enroll Baby Sitter View Controller-->
+        <scene sceneID="lQ0-oM-F34">
+            <objects>
+                <viewController id="bjr-ON-5zN" customClass="EnrollBabySitterViewController" customModule="AHMH" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BG9-4Z-8Rc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AgH-B0-4rj">
+                                <rect key="frame" x="190" y="122" width="208" height="122"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름을 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5zV-12-N8w">
+                                        <rect key="frame" x="0.0" y="0.0" width="208" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="나이를 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pk1-Hp-R7N">
+                                        <rect key="frame" x="0.0" y="44" width="208" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="성별을 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2wR-Od-3Gu">
+                                        <rect key="frame" x="0.0" y="88" width="208" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WrQ-Be-KAZ">
+                                <rect key="frame" x="20" y="108" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="6dT-AG-eb4"/>
+                                    <constraint firstAttribute="width" secondItem="WrQ-Be-KAZ" secondAttribute="height" multiplier="1:1" id="g9A-fI-FzJ"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LXa-5d-Wgc">
+                                <rect key="frame" x="16" y="288" width="382" height="244"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한 줄 소개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bG7-id-sTt">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="djO-xj-Fa3">
+                                        <rect key="frame" x="0.0" y="30.5" width="382" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자격 또는 경력" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6w5-dC-jkX">
+                                        <rect key="frame" x="0.0" y="74.5" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5WY-FB-1En">
+                                        <rect key="frame" x="0.0" y="105" width="382" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="희망 시급" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agZ-9C-eaB">
+                                        <rect key="frame" x="0.0" y="149" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ghf-Yn-3e1">
+                                        <rect key="frame" x="0.0" y="179.5" width="382" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자기 소개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6m-ZQ-S0I">
+                                        <rect key="frame" x="0.0" y="223.5" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ih0-hU-9Wf">
+                                <rect key="frame" x="16" y="542" width="382" height="221"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6D1-44-6RG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LXa-5d-Wgc" firstAttribute="centerX" secondItem="BG9-4Z-8Rc" secondAttribute="centerX" id="1Bm-dc-h51"/>
+                            <constraint firstItem="LXa-5d-Wgc" firstAttribute="top" secondItem="WrQ-Be-KAZ" secondAttribute="bottom" constant="30" id="Cou-rm-NIg"/>
+                            <constraint firstItem="LXa-5d-Wgc" firstAttribute="leading" secondItem="6D1-44-6RG" secondAttribute="leading" constant="16" id="DE3-Yj-xbv"/>
+                            <constraint firstItem="WrQ-Be-KAZ" firstAttribute="top" secondItem="6D1-44-6RG" secondAttribute="top" constant="20" id="Emc-wr-9lI"/>
+                            <constraint firstItem="6D1-44-6RG" firstAttribute="bottom" secondItem="Ih0-hU-9Wf" secondAttribute="bottom" constant="50" id="L3H-4t-dOn"/>
+                            <constraint firstItem="Ih0-hU-9Wf" firstAttribute="top" secondItem="LXa-5d-Wgc" secondAttribute="bottom" constant="10" id="NQe-c2-6mX"/>
+                            <constraint firstItem="Ih0-hU-9Wf" firstAttribute="leading" secondItem="6D1-44-6RG" secondAttribute="leading" constant="16" id="URw-vl-U0G"/>
+                            <constraint firstItem="WrQ-Be-KAZ" firstAttribute="leading" secondItem="6D1-44-6RG" secondAttribute="leading" constant="20" id="n0G-7S-P1y"/>
+                            <constraint firstItem="AgH-B0-4rj" firstAttribute="centerY" secondItem="WrQ-Be-KAZ" secondAttribute="centerY" id="qBj-jf-5lE"/>
+                            <constraint firstItem="AgH-B0-4rj" firstAttribute="leading" secondItem="WrQ-Be-KAZ" secondAttribute="trailing" constant="20" id="tiU-XB-jHI"/>
+                            <constraint firstItem="Ih0-hU-9Wf" firstAttribute="centerX" secondItem="BG9-4Z-8Rc" secondAttribute="centerX" id="yQF-C7-9k9"/>
+                            <constraint firstItem="6D1-44-6RG" firstAttribute="trailing" secondItem="AgH-B0-4rj" secondAttribute="trailing" constant="16" id="yWO-c2-pep"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HnB-OR-Hww"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f0l-7I-Xnu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6973.913043478261" y="1695.5357142857142"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5Q6-02-YB1">
@@ -998,7 +1106,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZJm-ef-cp2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928.98550724637687" y="78.348214285714278"/>
+            <point key="canvasLocation" x="1001" y="-115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JhC-tP-2If">
@@ -1017,7 +1125,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fQH-Yd-LYp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2236.231884057971" y="839.73214285714278"/>
+            <point key="canvasLocation" x="280" y="840"/>
         </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="6SD-Jt-cEi">
@@ -1140,7 +1248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iMb-rW-zNr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2081.159420289855" y="780.80357142857144"/>
+            <point key="canvasLocation" x="-1265" y="-115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vjV-u2-7gT">
@@ -1159,7 +1267,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6eY-eu-Gzl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6252.1739130434789" y="888.61607142857144"/>
+            <point key="canvasLocation" x="4052" y="840"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GJ7-cy-iAm">
@@ -1178,7 +1286,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CF9-nN-GpE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8337.68115942029" y="888.61607142857144"/>
+            <point key="canvasLocation" x="6159" y="840"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nA6-gd-dKq">
@@ -1197,7 +1305,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MtA-EC-l76" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="91.304347826086968" y="839.73214285714278"/>
+            <point key="canvasLocation" x="-1265" y="840"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MEB-vJ-WQM">
@@ -1216,7 +1324,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K3t-NT-hiQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4123.188405797102" y="888.61607142857144"/>
+            <point key="canvasLocation" x="2086" y="840"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Gao-7d-H2B">
@@ -1233,14 +1341,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aYM-Wi-Rm6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2991.304347826087" y="780.80357142857144"/>
+            <point key="canvasLocation" x="-2162" y="-115"/>
         </scene>
     </scenes>
     <resources>
         <image name="KakaoTalk_Photo_2021-10-22-00-11-15" width="621" height="421"/>
         <image name="baby-1" width="512" height="512"/>
         <image name="baby-2" width="512" height="512"/>
-        <image name="ellipsis.bubble" catalog="system" width="128" height="110"/>
         <image name="eyes" catalog="system" width="128" height="99"/>
         <image name="globe" catalog="system" width="128" height="121"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
@@ -1249,8 +1356,14 @@
         <image name="message" catalog="system" width="128" height="113"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

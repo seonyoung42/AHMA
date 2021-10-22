@@ -11,19 +11,24 @@ class EnrollBabySitterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
 
-        // Do any additional setup after loading the view.
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "등록", style: .plain, target: self, action: #selector(enrollBabySitterToDB))
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func enrollBabySitterToDB() {
+        
+        let AC = UIAlertController(title: "돌보미 등록", message: "돌보미로 등록 하시겠습니까?", preferredStyle: .alert)
+        
+        AC.addAction(UIAlertAction(title: "예", style: .default, handler: { [self] _ in
+            self.navigationController?.popViewController(animated: true)
+            // Firebase DB에 등록
+            
+        }))
+        AC.addAction(UIAlertAction(title: "아니오", style: .cancel, handler: nil))
+       
+        present(AC, animated: true, completion: nil)
+        
     }
-    */
 
 }

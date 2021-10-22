@@ -17,6 +17,7 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
         
         locationManager.delegate = self
         congfigureLocationServices()

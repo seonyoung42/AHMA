@@ -47,6 +47,8 @@ class UserViewController: UIViewController {
             $0?.layer.borderWidth = 2
             $0?.layer.borderColor = CGColor(red: 255/255, green: 171/255, blue: 115/255, alpha: 1)
             $0?.layer.cornerRadius = 20
+            $0?.setTitleColor(UIColor.lightGray, for: .selected)
+            
             
             buttonsBackView.layer.cornerRadius = 20
         }
@@ -77,6 +79,13 @@ class UserViewController: UIViewController {
             print("ERROR: signout \(signOutError.localizedDescription)")
         }
     }
+    
+    
+    @IBAction func moveToLocationVC(_ sender: Any) {
+        let nextVC = LocationViewController()
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
     
    
     @IBAction func profileUpdateButtonTapped(_ sender: Any) {
