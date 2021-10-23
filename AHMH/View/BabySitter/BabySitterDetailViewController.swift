@@ -9,7 +9,7 @@ import UIKit
 
 class BabySitterDetailViewController: UIViewController {
     
-    @IBOutlet var messageButton: UIButton!
+//    @IBOutlet var messageButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,7 @@ class BabySitterDetailViewController: UIViewController {
     
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "ellipsis.bubble"), style: .plain, target: self, action: #selector(messageButtonTapped))
         
-        messageButton.addTarget(self, action: #selector(messageButtonTapped), for: .touchUpInside)
+//        messageButton.addTarget(self, action: #selector(messageButtonTapped), for: .touchUpInside)
     }
 
     @objc func messageButtonTapped() {

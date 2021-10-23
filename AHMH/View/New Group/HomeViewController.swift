@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
     @IBOutlet var welcomeLabel: UILabel!
     @IBOutlet var communityCollectionView: UICollectionView!
     @IBOutlet var bookCollectionView: UICollectionView!
+    @IBOutlet var tableView: UITableView!
     
     var communities : [CommunityCategory] = [
         .init(id: "id1", name: "0~2세", image: (UIImage(named: "0-1")?.pngData())!),
@@ -50,6 +51,9 @@ class HomeViewController: UIViewController {
         self.bookCollectionView.delegate = self
         self.bookCollectionView.dataSource = self
         
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
         registerCells()
         loadBookListFromCSV()
 
@@ -67,7 +71,7 @@ class HomeViewController: UIViewController {
             let data = try Data(contentsOf: url)
             let dataEncoded = String(data: data, encoding: .utf8)
                 
-            if let dataArr = dataEncoded?.components(separatedBy: "\n").map({$0.components(separatedBy: ",")}) {
+            if let dataArr = dataEncoded?.components(separatedBy: "\n").map({$0.components(separatedBy: "|")}) {
                     
                 for item in dataArr {
                     bookList.append(item)
@@ -81,7 +85,7 @@ class HomeViewController: UIViewController {
     
     // - Load Data from Parsed CSV File
     private func loadBookListFromCSV() {
-        let path = Bundle.main.path(forResource: "children_book", ofType: "csv")!
+        let path = Bundle.main.path(forResource: "children_Book1", ofType: "csv")!
         parseCSVAt(url: URL(fileURLWithPath: path))
         bookCollectionView.reloadData()
     }
@@ -151,6 +155,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             do {
                 let data = try Data(contentsOf: url!)
                 cell.BookImageView.image = UIImage(data: data)
+                print("success")
             } catch {
                 print("Error loading Image by URL")
             }
@@ -216,4 +221,30 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
     }
     
+}
+
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        10
+    }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        180
+//    }
+//
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SupportTableViewCell", for: indexPath) as! SupportTableViewCell
+        
+        return cell
+    }
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//        guard let detailViewController = storyboard.instantiateViewController(identifier: "BabySitterDetailViewController") as? BabySitterDetailViewController else { return }
+//        self.show(detailViewController, sender: nil)
+//        tableView.deselectRow(at: indexPath, animated: true)
+//    }
 }

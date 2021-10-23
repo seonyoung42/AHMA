@@ -51,19 +51,6 @@ extension DatabaseManager {
                 return
             }
             
-            /*
-             [
-                [
-                    "name":
-                    "safe_email":
-                ],
-                [
-                 "name":
-                 "safe_email":
-                ]
-             ]
-             */
-            
             self.database.child("users").observeSingleEvent(of: .value, with: { snapshot in
                 if var usersCollection = snapshot.value as? [[String: String]] {
                     
