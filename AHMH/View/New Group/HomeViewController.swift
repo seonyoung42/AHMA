@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet var communityCollectionView: UICollectionView!
     @IBOutlet var bookCollectionView: UICollectionView!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var journalCollectionView: UICollectionView!
     
     var communities : [CommunityCategory] = [
         .init(id: "id1", name: "0~2세", image: (UIImage(named: "0-1")?.pngData())!),
@@ -29,6 +30,12 @@ class HomeViewController: UIViewController {
 //        .init(id: "id1", title: "일단 시작해 봐!: 이명랑 청소년 소설", author: "지은이: 이명랑 그림: 뻑새", image: (UIImage(named: "baby-1")?.pngData())!),
 //        .init(id: "id1", title: "일단 시작해 봐!: 이명랑 청소년 소설", author: "지은이: 이명랑 그림: 뻑새", image: (UIImage(named: "baby-1")?.pngData())!)
 //    ]
+    
+    var journals: [Journal] = [
+        .init(title: "부부갈등 자녀에게 미치는 영향 최소화하기", image: #imageLiteral(resourceName: "journal1")),
+        .init(title: "어른들의 다른 양육태도는 아이의 성장을 방해해요", image: #imageLiteral(resourceName: "journal2")),
+        .init(title: "둘째가 생겼을 때 첫째아이 어린이집 보내기", image: #imageLiteral(resourceName: "journal3"))
+    ]
     
     var bookList: [[String]] = []
     
@@ -55,6 +62,9 @@ class HomeViewController: UIViewController {
         
         self.bookCollectionView.delegate = self
         self.bookCollectionView.dataSource = self
+        
+        self.journalCollectionView.delegate = self
+        self.journalCollectionView.dataSource = self
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -137,6 +147,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return communities.count
         case bookCollectionView:
             return bookList.count
+        case journalCollectionView:
+            return journals.count
         default:
             return 0
         }
@@ -168,6 +180,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cell.BookTitle.text = bookList[indexPath.row][0]
             cell.BookAuthor.text = bookList[indexPath.row][2]
             
+            return cell
+            
+        case journalCollectionView:
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: JournalCollectionViewCell.identifier, for: indexPath) as! JournalCollectionViewCell
+            cell.setup(journal: journals[indexPath.row])
             return cell
             
         default:
