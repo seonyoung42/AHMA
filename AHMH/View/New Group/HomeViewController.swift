@@ -215,6 +215,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
         case communityCollectionView:
             performSegue(withIdentifier: "showCommunityDetail", sender: communities[indexPath.row].name)
+            
         case bookCollectionView:
             
 //            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
@@ -243,6 +244,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cell.BookTitle.text = bookList[indexPath.row][0]
             cell.BookAuthor.text = bookList[indexPath.row][2]
             
+        case journalCollectionView:
+            print("select journal")
+//            performSegue(withIdentifier: "showJournalDetail", sender: nil)
             
         default:
           print("select cell")
