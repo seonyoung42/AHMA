@@ -200,6 +200,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             secondVC?.book = sender as! [String]
             
         }
+        
+        if segue.identifier == "showCommunityDetail" {
+            let detailVC = segue.destination as? CommunityDetailViewController
+            detailVC?.viewTitle = sender as! String
+        }
 //        guard let secondVC = segue.destination as? BookDetailViewController else { return }
         
     }
@@ -208,6 +213,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         switch collectionView {
 
+        case communityCollectionView:
+            performSegue(withIdentifier: "showCommunityDetail", sender: communities[indexPath.row].name)
         case bookCollectionView:
             
 //            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)

@@ -17,6 +17,9 @@
 		2B160DFC27245C9C00FEF84E /* SupportDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B160DFB27245C9C00FEF84E /* SupportDetailTableViewController.swift */; };
 		2B160E00272466EC00FEF84E /* JournalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B160DFE272466EC00FEF84E /* JournalCollectionViewCell.swift */; };
 		2B160E03272467A000FEF84E /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B160E02272467A000FEF84E /* Journal.swift */; };
+		2B160E052726EDB800FEF84E /* CommunityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B160E042726EDB800FEF84E /* CommunityDetailViewController.swift */; };
+		2B160E072726EE0C00FEF84E /* CommunityDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B160E062726EE0C00FEF84E /* CommunityDetailTableViewCell.swift */; };
+		2B160E092726F0F000FEF84E /* CommunityDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B160E082726F0F000FEF84E /* CommunityDetail.swift */; };
 		2BC3D0A1271BE343005D5E82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0A0271BE343005D5E82 /* AppDelegate.swift */; };
 		2BC3D0A3271BE343005D5E82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0A2271BE343005D5E82 /* SceneDelegate.swift */; };
 		2BC3D0A8271BE343005D5E82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC3D0A6271BE343005D5E82 /* Main.storyboard */; };
@@ -69,6 +72,9 @@
 		2B160DFB27245C9C00FEF84E /* SupportDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportDetailTableViewController.swift; sourceTree = "<group>"; };
 		2B160DFE272466EC00FEF84E /* JournalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalCollectionViewCell.swift; sourceTree = "<group>"; };
 		2B160E02272467A000FEF84E /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
+		2B160E042726EDB800FEF84E /* CommunityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDetailViewController.swift; sourceTree = "<group>"; };
+		2B160E062726EE0C00FEF84E /* CommunityDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDetailTableViewCell.swift; sourceTree = "<group>"; };
+		2B160E082726F0F000FEF84E /* CommunityDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDetail.swift; sourceTree = "<group>"; };
 		2BC3D09D271BE343005D5E82 /* AHMH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AHMH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC3D0A0271BE343005D5E82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BC3D0A2271BE343005D5E82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +154,9 @@
 				2BC3D0E6271FC692005D5E82 /* CommunityCategory.swift */,
 				2BC3D0E2271FC514005D5E82 /* CommunityCollectionViewCell.swift */,
 				2BC3D0E3271FC514005D5E82 /* CommunityCollectionViewCell.xib */,
+				2B160E042726EDB800FEF84E /* CommunityDetailViewController.swift */,
+				2B160E062726EE0C00FEF84E /* CommunityDetailTableViewCell.swift */,
+				2B160E082726F0F000FEF84E /* CommunityDetail.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -486,6 +495,7 @@
 				2BC3D0D3271E8832005D5E82 /* Chat.swift in Sources */,
 				2B160DFC27245C9C00FEF84E /* SupportDetailTableViewController.swift in Sources */,
 				2B160DFA272458EB00FEF84E /* SupportTableViewCell.swift in Sources */,
+				2B160E052726EDB800FEF84E /* CommunityDetailViewController.swift in Sources */,
 				2B160DE82722F0EC00FEF84E /* EnrollBabySitterViewController.swift in Sources */,
 				2BC3D0C4271C2646005D5E82 /* BabySitterDetailViewController.swift in Sources */,
 				2BC3D0FD27200C56005D5E82 /* OnboardingCollectionViewCell.swift in Sources */,
@@ -498,10 +508,12 @@
 				2BC3D0CB271D3958005D5E82 /* LoginViewController.swift in Sources */,
 				2BC3D0FB27200A7C005D5E82 /* OnboardingSlide.swift in Sources */,
 				2BC3D0E4271FC514005D5E82 /* CommunityCollectionViewCell.swift in Sources */,
+				2B160E092726F0F000FEF84E /* CommunityDetail.swift in Sources */,
 				2BC3D1082721123A005D5E82 /* BookDetailViewController.swift in Sources */,
 				2B160E00272466EC00FEF84E /* JournalCollectionViewCell.swift in Sources */,
 				2B160E03272467A000FEF84E /* Journal.swift in Sources */,
 				2BC3D0D7271E88BF005D5E82 /* ChatViewController.swift in Sources */,
+				2B160E072726EE0C00FEF84E /* CommunityDetailTableViewCell.swift in Sources */,
 				2BC3D0B8271BEA50005D5E82 /* HomeViewController.swift in Sources */,
 				2BC3D0DF271EC103005D5E82 /* StorageManager.swift in Sources */,
 			);
