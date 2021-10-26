@@ -17,6 +17,7 @@ class BabySitterDetailViewController: UIViewController {
     //    @IBOutlet var messageButton: UIButton!
     @IBOutlet var instructionTF: UITextField!
     
+    @IBOutlet var instructionTV: UITextView!
     var babySitter : BabySitter!
 
     override func viewDidLoad() {
@@ -39,6 +40,9 @@ class BabySitterDetailViewController: UIViewController {
         profileImageView.layer.borderWidth = 3
         profileImageView.layer.borderColor = UIColor(cgColor: CGColor(red: 196/255, green: 234/255, blue: 218/255, alpha: 1)).cgColor
         
+        instructionTV.layer.borderWidth = 0.5
+        instructionTV.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.3).cgColor
+        instructionTV.cornerRadius = 5
     }
 
     @objc func messageButtonTapped() {

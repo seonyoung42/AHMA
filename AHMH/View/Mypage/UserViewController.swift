@@ -15,7 +15,9 @@ class UserViewController: UIViewController {
     @IBOutlet var profileImage: UIImageView!
     @IBOutlet var locationButton: UIButton!
     @IBOutlet var babySitterButton: UIButton!
+    @IBOutlet var questionButton: UIButton!
     @IBOutlet var logoutButton: UIButton!
+    
     @IBOutlet var profileBackView: CardView!
     @IBOutlet var buttonsBackView: CardView!
     
@@ -43,7 +45,7 @@ class UserViewController: UIViewController {
                 
 //        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.badge.xmark"), style: .plain, target: self, action: #selector(logout))
         
-        [locationButton,babySitterButton,logoutButton].forEach {
+        [locationButton,babySitterButton,logoutButton,questionButton].forEach {
             
             $0?.layer.borderWidth = 2
             $0?.layer.borderColor = CGColor(red: 255/255, green: 171/255, blue: 115/255, alpha: 1)

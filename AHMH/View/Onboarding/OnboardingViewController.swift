@@ -14,9 +14,10 @@ class OnboardingViewController: UIViewController {
     @IBOutlet var nextButton: UIButton!
     
     var slides: [OnboardingSlide] = [
-        .init(title: "Delicious Dishes", description: "Experience a variety of amazing dishes from different cultures around the world.", image: #imageLiteral(resourceName: "baby-2")),
-        .init(title: "Delicious Dishes", description: "Experience a variety of amazing dishes from different cultures around the world.", image: #imageLiteral(resourceName: "baby-2")),
-        .init(title: "Delicious Dishes", description: "Experience a variety of amazing dishes from different cultures around the world.", image: #imageLiteral(resourceName: "baby-2"))
+        .init(title: "Informations", description: "지원 정책, 육아 서적, 육아 컬럼 등 다양한 정보를 얻을 수 있어요.", image: #imageLiteral(resourceName: "informationImage")),
+        .init(title: "Facilities", description: "위치 서비스를 통해 내 근처 보육시설을 간편히 알 수 있어요.", image: #imageLiteral(resourceName: "locationImage")),
+        .init(title: "Connections", description: "위치 서비스를 통해 내 근처의 돌보미를 알 수 있어요", image: #imageLiteral(resourceName: "locationHandImage")),
+        .init(title: "Community", description: "나이대 별 커뮤니티를 통해 아이의 성장에 맞는 의견을 교류할 수 있어요", image: #imageLiteral(resourceName: "CommunityImage"))
     ]
     
     var currentPage = 0 {
