@@ -15,8 +15,10 @@ class FacilityDetailViewController: UIViewController {
     
     @IBOutlet var facilityName: UITextField!
     @IBOutlet var facilityAddress: UITextField!
+    @IBOutlet var facilityWebButton: UIButton!
     
     var facility : [String] = []
+    var facilityURL = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +39,14 @@ class FacilityDetailViewController: UIViewController {
         
         facilityName.text = name
         facilityAddress.text = adrress
+        
+        if facility[7] == "Y" {
+            facilityURL = facility[8]
+        } else {
+            facilityWebButton.isEnabled = false
+//            facilityURL = "https://www.naver.com"
+        }
+       
         
         setAnnotation(latitudeValue: Double(latitude)!, longitudeValue: Double(longitude)! , delta: 0.1, title: name, subtitle: adrress)
        
@@ -63,7 +73,7 @@ class FacilityDetailViewController: UIViewController {
     
     @IBAction func loadWebView(_ sender: Any) {
         
-        let url = URL(string: "https://www.naver.com")
+        let url = URL(string: facilityURL )
         let safariViewController = SFSafariViewController(url: url!)
         present(safariViewController, animated: true, completion: nil)
         

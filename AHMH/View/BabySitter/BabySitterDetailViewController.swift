@@ -9,7 +9,15 @@ import UIKit
 
 class BabySitterDetailViewController: UIViewController {
     
-//    @IBOutlet var messageButton: UIButton!
+    @IBOutlet var profileImageView: UIImageView!
+    
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var ageLabel: UILabel!
+    @IBOutlet var addressLabel: UILabel!
+    //    @IBOutlet var messageButton: UIButton!
+    @IBOutlet var instructionTF: UITextField!
+    
+    var babySitter : BabySitter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +26,11 @@ class BabySitterDetailViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = UIColor(cgColor: CGColor(red: 252/255, green: 243/255, blue: 202/255, alpha: 1))
     
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "ellipsis.bubble"), style: .plain, target: self, action: #selector(messageButtonTapped))
+        
+        profileImageView.image = babySitter.profileImage
+        nameLabel.text = babySitter.name
+        ageLabel.text = babySitter.age
+        addressLabel.text = babySitter.location
         
 //        messageButton.addTarget(self, action: #selector(messageButtonTapped), for: .touchUpInside)
     }

@@ -15,15 +15,17 @@ class FacilitiesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
+        self.view.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
         
         let location = UserDefaults.standard.value(forKey: "위치")
         
-        if location != nil {
-            self.navigationItem.title = location as! String
-        } else {
-            self.navigationItem.title = "위치 정보를 등록해주세요."
-        }
+        self.navigationItem.title = "내 주변 육아시설"
+        
+//        if location != nil {
+//            self.navigationItem.title = location as! String
+//        } else {
+//            self.navigationItem.title = "위치 정보를 등록해주세요."
+//        }
     
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -35,12 +37,17 @@ class FacilitiesViewController: UIViewController {
 
         self.navigationController?.navigationBar.barTintColor = UIColor(cgColor: CGColor(red: 252/255, green: 243/255, blue: 202/255, alpha: 1))
             
-        loadBookListFromCSV()
+        
+        let path = Bundle.main.path(forResource: "totallist", ofType: "csv")!
+        parseCSVAt(url: URL(fileURLWithPath: path))
+        
+        tableView.reloadData()
     }
     
     
     // - Parse CSV File
     private func parseCSVAt(url:URL) {
+        facilityList = []
         
         do {
             let data = try Data(contentsOf: url)
@@ -60,14 +67,32 @@ class FacilitiesViewController: UIViewController {
     }
     
     // - Load Data from Parsed CSV File
-    private func loadBookListFromCSV() {
+//    private func loadBookListFromCSV() {
+//
+//        // commonChildPlayRoom1/ publicchildplace
+//        let path = Bundle.main.path(forResource: "totallist", ofType: "csv")!
+//        parseCSVAt(url: URL(fileURLWithPath: path))
+//
+//        tableView.reloadData()
+//    }
+    
+    
+    @IBAction func playRoomButtonTapped(_ sender: Any) {
+        let path = Bundle.main.path(forResource: "totallist", ofType: "csv")!
+        parseCSVAt(url: URL(fileURLWithPath: path))
+        
+        tableView.reloadData()
+        
+    }
+    
+    @IBAction func careRoomButtonTapped(_ sender: Any) {
         
         let path = Bundle.main.path(forResource: "publicchildplace", ofType: "csv")!
         parseCSVAt(url: URL(fileURLWithPath: path))
         
         tableView.reloadData()
     }
-   
+    
 }
 
 // - 테이블 뷰

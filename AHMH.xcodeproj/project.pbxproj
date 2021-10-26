@@ -10,9 +10,6 @@
 		2B160DE62722E88500FEF84E /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B160DE52722E88500FEF84E /* LocationViewController.swift */; };
 		2B160DE82722F0EC00FEF84E /* EnrollBabySitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B160DE72722F0EC00FEF84E /* EnrollBabySitterViewController.swift */; };
 		2B160DED27232EF900FEF84E /* children_Book1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2B160DEC27232EF900FEF84E /* children_Book1.csv */; };
-		2B160DF32723FE0A00FEF84E /* totalCareList2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2B160DF22723FE0A00FEF84E /* totalCareList2.csv */; };
-		2B160DF52723FE1F00FEF84E /* seoulplayList1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2B160DF42723FE1F00FEF84E /* seoulplayList1.csv */; };
-		2B160DF72723FE2D00FEF84E /* totalCareList3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2B160DF62723FE2D00FEF84E /* totalCareList3.csv */; };
 		2B160DFA272458EB00FEF84E /* SupportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B160DF9272458EB00FEF84E /* SupportTableViewCell.swift */; };
 		2B160DFC27245C9C00FEF84E /* SupportDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B160DFB27245C9C00FEF84E /* SupportDetailTableViewController.swift */; };
 		2B160E00272466EC00FEF84E /* JournalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B160DFE272466EC00FEF84E /* JournalCollectionViewCell.swift */; };
@@ -21,6 +18,7 @@
 		2B160E072726EE0C00FEF84E /* CommunityDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B160E062726EE0C00FEF84E /* CommunityDetailTableViewCell.swift */; };
 		2B160E092726F0F000FEF84E /* CommunityDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B160E082726F0F000FEF84E /* CommunityDetail.swift */; };
 		2B160E0B2726F7B600FEF84E /* JournalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B160E0A2726F7B600FEF84E /* JournalDetailViewController.swift */; };
+		2B160E132728299800FEF84E /* BabySitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B160E122728299800FEF84E /* BabySitter.swift */; };
 		2BC3D0A1271BE343005D5E82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0A0271BE343005D5E82 /* AppDelegate.swift */; };
 		2BC3D0A3271BE343005D5E82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0A2271BE343005D5E82 /* SceneDelegate.swift */; };
 		2BC3D0A8271BE343005D5E82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC3D0A6271BE343005D5E82 /* Main.storyboard */; };
@@ -52,9 +50,7 @@
 		2BC3D0F9272009EE005D5E82 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0F8272009EE005D5E82 /* UIView+Extension.swift */; };
 		2BC3D0FB27200A7C005D5E82 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0FA27200A7C005D5E82 /* OnboardingSlide.swift */; };
 		2BC3D0FD27200C56005D5E82 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D0FC27200C56005D5E82 /* OnboardingCollectionViewCell.swift */; };
-		2BC3D10327203EC2005D5E82 /* children_book.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2BC3D10227203EC2005D5E82 /* children_book.csv */; };
 		2BC3D1082721123A005D5E82 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D1072721123A005D5E82 /* BookDetailViewController.swift */; };
-		2BC3D10C27211C08005D5E82 /* facility_seoul1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2BC3D10B27211C07005D5E82 /* facility_seoul1.csv */; };
 		2BC3D1162721425C005D5E82 /* FacilityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3D1152721425B005D5E82 /* FacilityTableViewCell.swift */; };
 		2BC3D11D27219020005D5E82 /* publicchildplace.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2BC3D11C2721901F005D5E82 /* publicchildplace.csv */; };
 		2BC3D1212721AE0F005D5E82 /* totallist.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2BC3D1202721AE0F005D5E82 /* totallist.csv */; };
@@ -66,9 +62,6 @@
 		2B160DE52722E88500FEF84E /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		2B160DE72722F0EC00FEF84E /* EnrollBabySitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollBabySitterViewController.swift; sourceTree = "<group>"; };
 		2B160DEC27232EF900FEF84E /* children_Book1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = children_Book1.csv; sourceTree = "<group>"; };
-		2B160DF22723FE0A00FEF84E /* totalCareList2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = totalCareList2.csv; sourceTree = "<group>"; };
-		2B160DF42723FE1F00FEF84E /* seoulplayList1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = seoulplayList1.csv; sourceTree = "<group>"; };
-		2B160DF62723FE2D00FEF84E /* totalCareList3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = totalCareList3.csv; sourceTree = "<group>"; };
 		2B160DF9272458EB00FEF84E /* SupportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportTableViewCell.swift; sourceTree = "<group>"; };
 		2B160DFB27245C9C00FEF84E /* SupportDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportDetailTableViewController.swift; sourceTree = "<group>"; };
 		2B160DFE272466EC00FEF84E /* JournalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -77,6 +70,7 @@
 		2B160E062726EE0C00FEF84E /* CommunityDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDetailTableViewCell.swift; sourceTree = "<group>"; };
 		2B160E082726F0F000FEF84E /* CommunityDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDetail.swift; sourceTree = "<group>"; };
 		2B160E0A2726F7B600FEF84E /* JournalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailViewController.swift; sourceTree = "<group>"; };
+		2B160E122728299800FEF84E /* BabySitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabySitter.swift; sourceTree = "<group>"; };
 		2BC3D09D271BE343005D5E82 /* AHMH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AHMH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC3D0A0271BE343005D5E82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BC3D0A2271BE343005D5E82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,9 +105,7 @@
 		2BC3D0F8272009EE005D5E82 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		2BC3D0FA27200A7C005D5E82 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		2BC3D0FC27200C56005D5E82 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
-		2BC3D10227203EC2005D5E82 /* children_book.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = children_book.csv; sourceTree = "<group>"; };
 		2BC3D1072721123A005D5E82 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
-		2BC3D10B27211C07005D5E82 /* facility_seoul1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = facility_seoul1.csv; sourceTree = "<group>"; };
 		2BC3D1152721425B005D5E82 /* FacilityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityTableViewCell.swift; sourceTree = "<group>"; };
 		2BC3D11C2721901F005D5E82 /* publicchildplace.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = publicchildplace.csv; sourceTree = "<group>"; };
 		2BC3D1202721AE0F005D5E82 /* totallist.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = totallist.csv; sourceTree = "<group>"; };
@@ -223,13 +215,8 @@
 			children = (
 				2BC3D0DC271E9744005D5E82 /* DatabaseManager.swift */,
 				2BC3D0DE271EC103005D5E82 /* StorageManager.swift */,
-				2BC3D10227203EC2005D5E82 /* children_book.csv */,
 				2B160DEC27232EF900FEF84E /* children_Book1.csv */,
-				2BC3D10B27211C07005D5E82 /* facility_seoul1.csv */,
 				2BC3D1202721AE0F005D5E82 /* totallist.csv */,
-				2B160DF62723FE2D00FEF84E /* totalCareList3.csv */,
-				2B160DF42723FE1F00FEF84E /* seoulplayList1.csv */,
-				2B160DF22723FE0A00FEF84E /* totalCareList2.csv */,
 				2BC3D11C2721901F005D5E82 /* publicchildplace.csv */,
 				2BC3D0FA27200A7C005D5E82 /* OnboardingSlide.swift */,
 			);
@@ -326,6 +313,7 @@
 			children = (
 				2BC3D0B9271BEAD7005D5E82 /* BabySitterViewController.swift */,
 				2BC3D0C3271C2646005D5E82 /* BabySitterDetailViewController.swift */,
+				2B160E122728299800FEF84E /* BabySitter.swift */,
 			);
 			path = BabySitter;
 			sourceTree = "<group>";
@@ -401,19 +389,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B160DED27232EF900FEF84E /* children_Book1.csv in Resources */,
-				2B160DF72723FE2D00FEF84E /* totalCareList3.csv in Resources */,
 				2BC3D0E5271FC514005D5E82 /* CommunityCollectionViewCell.xib in Resources */,
-				2B160DF52723FE1F00FEF84E /* seoulplayList1.csv in Resources */,
 				2BC3D1212721AE0F005D5E82 /* totallist.csv in Resources */,
 				2BC3D0ED271FEBE9005D5E82 /* BookCollectionViewCell.xib in Resources */,
-				2BC3D10327203EC2005D5E82 /* children_book.csv in Resources */,
 				2BC3D11D27219020005D5E82 /* publicchildplace.csv in Resources */,
-				2BC3D10C27211C08005D5E82 /* facility_seoul1.csv in Resources */,
 				2BC3D0AD271BE345005D5E82 /* LaunchScreen.storyboard in Resources */,
 				2BC3D0CD271D3D6A005D5E82 /* GoogleService-Info.plist in Resources */,
 				2BC3D0AA271BE345005D5E82 /* Assets.xcassets in Resources */,
 				2BC3D0A8271BE343005D5E82 /* Main.storyboard in Resources */,
-				2B160DF32723FE0A00FEF84E /* totalCareList2.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +470,7 @@
 				2BC3D0A1271BE343005D5E82 /* AppDelegate.swift in Sources */,
 				2BC3D1162721425C005D5E82 /* FacilityTableViewCell.swift in Sources */,
 				2BC3D0EF271FF8C2005D5E82 /* Book.swift in Sources */,
+				2B160E132728299800FEF84E /* BabySitter.swift in Sources */,
 				2BC3D0DD271E9744005D5E82 /* DatabaseManager.swift in Sources */,
 				2BC3D0F62720079A005D5E82 /* OnboardingViewController.swift in Sources */,
 				2BC3D0BA271BEAD7005D5E82 /* BabySitterViewController.swift in Sources */,
