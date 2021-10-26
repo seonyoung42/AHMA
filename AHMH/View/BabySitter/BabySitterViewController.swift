@@ -14,14 +14,14 @@ class BabySitterViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var babySitters: [BabySitter] = [
         
-        .init(profileImage: UIImage(named: "profileImage5")!, name: "장선영", age: "24", location: "서울시 성동구", instruction: "돌보미 경력 2년차입니다."),
-        .init(profileImage: UIImage(named: "profileImage1")!, name: "곽예영", age: "24", location: "서울시 성동구", instruction: "경험이 많은 돌보미입니다."),
-        .init(profileImage: UIImage(named: "profileImage3")!, name: "이지혜", age: "23", location: "서울시 성동구", instruction: "항상 미소를 짓고 있습니다."),
-        .init(profileImage: UIImage(named: "profileImage4")!, name: "박수린", age: "23", location: "서울시 성동구", instruction: "유아교육과 실습 경험이 있습니다"),
-        .init(profileImage: UIImage(named: "profileImage1")!, name: "곽예영", age: "24", location: "서울시 성동구", instruction: "경험이 많은 돌보미입니다."),
-        .init(profileImage: UIImage(named: "profileImage6")!, name: "장재희", age: "23", location: "서울시 성동구", instruction: "내 동생, 내 아이처럼 돌볼 수 있습니다."),
-        .init(profileImage: UIImage(named: "profileImage2")!, name: "곽지원", age: "22", location: "서울시 성동구", instruction: "아이를 좋아하는 돌보미입니다."),
-        .init(profileImage: UIImage(named: "profileImage7")!, name: "방예린", age: "22", location: "서울시 성동구", instruction: "아이의 성장을 함께하고 싶습니다")
+        .init(profileImage: UIImage(named: "profileImage5")!, name: "장선영", age: "25세", location: "서울시 성동구", instruction: "돌보미 경력 2년차입니다."),
+        .init(profileImage: UIImage(named: "profileImage1")!, name: "곽예영", age: "24세", location: "서울시 성동구", instruction: "경험이 많은 돌보미입니다."),
+        .init(profileImage: UIImage(named: "profileImage3")!, name: "이지혜", age: "23세", location: "서울시 성동구", instruction: "항상 미소를 짓고 있습니다."),
+        .init(profileImage: UIImage(named: "profileImage4")!, name: "박수린", age: "23세", location: "서울시 성동구", instruction: "유아교육과 실습 경험이 있습니다"),
+        .init(profileImage: UIImage(named: "profileImage1")!, name: "곽예영", age: "25세", location: "서울시 성동구", instruction: "경험이 많은 돌보미입니다."),
+        .init(profileImage: UIImage(named: "profileImage6")!, name: "장재희", age: "23세", location: "서울시 성동구", instruction: "내 동생, 내 아이처럼 돌볼 수 있습니다."),
+        .init(profileImage: UIImage(named: "profileImage2")!, name: "곽지원", age: "22세", location: "서울시 성동구", instruction: "아이를 좋아하는 돌보미입니다."),
+        .init(profileImage: UIImage(named: "profileImage7")!, name: "방예린", age: "24세", location: "서울시 성동구", instruction: "아이의 성장을 함께하고 싶습니다")
     ]
     
     override func viewDidLoad() {
@@ -32,6 +32,8 @@ class BabySitterViewController: UIViewController, UITableViewDelegate, UITableVi
         self.tableView.separatorStyle = .none
         self.tableView.showsVerticalScrollIndicator = false
         self.tableView.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
+        
+        self.view.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
         
         let location = UserDefaults.standard.value(forKey: "위치")
         
@@ -99,8 +101,8 @@ class BabySitterCell : UITableViewCell {
         contentView.layer.cornerRadius = 30
         
         babySitterImage.cornerRadius = babySitterImage.bounds.width/2
-        babySitterImage.layer.borderWidth = 2
-        babySitterImage.layer.borderColor = CGColor(red: 196/255, green: 240/255, blue: 225/255, alpha: 1)
+        babySitterImage.layer.borderWidth = 3
+        babySitterImage.layer.borderColor = CGColor(red: 210/255, green: 230/255, blue: 245/255, alpha: 1)
     }
     
     func setup(babySitter: BabySitter) {

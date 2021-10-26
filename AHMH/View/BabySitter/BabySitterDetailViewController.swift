@@ -22,7 +22,7 @@ class BabySitterDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
+//        self.view.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
         self.navigationController?.navigationBar.barTintColor = UIColor(cgColor: CGColor(red: 252/255, green: 243/255, blue: 202/255, alpha: 1))
     
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "ellipsis.bubble"), style: .plain, target: self, action: #selector(messageButtonTapped))
@@ -31,8 +31,14 @@ class BabySitterDetailViewController: UIViewController {
         nameLabel.text = babySitter.name
         ageLabel.text = babySitter.age
         addressLabel.text = babySitter.location
-        
+        instructionTF.text = babySitter.instruction
 //        messageButton.addTarget(self, action: #selector(messageButtonTapped), for: .touchUpInside)
+        
+        
+        profileImageView.cornerRadius = profileImageView.bounds.width/2
+        profileImageView.layer.borderWidth = 3
+        profileImageView.layer.borderColor = UIColor(cgColor: CGColor(red: 196/255, green: 234/255, blue: 218/255, alpha: 1)).cgColor
+        
     }
 
     @objc func messageButtonTapped() {

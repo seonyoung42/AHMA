@@ -10,16 +10,19 @@ import UIKit
 class FacilitiesViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var playRoomButton: UIButton!
+    @IBOutlet var careRoomButton: UIButton!
     
     var facilityList: [[String]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
+        self.playRoomButton.isEnabled = false
         
         let location = UserDefaults.standard.value(forKey: "위치")
         
-        self.navigationItem.title = "내 주변 육아시설"
+        self.navigationItem.title = "내 근처 육아시설"
         
 //        if location != nil {
 //            self.navigationItem.title = location as! String
@@ -81,6 +84,9 @@ class FacilitiesViewController: UIViewController {
         let path = Bundle.main.path(forResource: "totallist", ofType: "csv")!
         parseCSVAt(url: URL(fileURLWithPath: path))
         
+        self.playRoomButton.isEnabled = false
+        self.careRoomButton.isEnabled = true
+        
         tableView.reloadData()
         
     }
@@ -89,6 +95,9 @@ class FacilitiesViewController: UIViewController {
         
         let path = Bundle.main.path(forResource: "publicchildplace", ofType: "csv")!
         parseCSVAt(url: URL(fileURLWithPath: path))
+        
+        self.careRoomButton.isEnabled = false
+        self.playRoomButton.isEnabled = true
         
         tableView.reloadData()
     }

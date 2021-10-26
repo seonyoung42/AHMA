@@ -18,6 +18,7 @@ class UserViewController: UIViewController {
     @IBOutlet var logoutButton: UIButton!
     @IBOutlet var profileBackView: CardView!
     @IBOutlet var buttonsBackView: CardView!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         createUserProfile()

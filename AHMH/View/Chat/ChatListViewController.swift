@@ -20,7 +20,7 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.barTintColor = UIColor(cgColor: CGColor(red: 252/255, green: 243/255, blue: 202/255, alpha: 1))
-        self.navigationItem.title = "채팅 목록"
+        self.navigationItem.title = "돌보미 채팅 목록"
         self.tableView.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
         
         tableView.delegate = self
