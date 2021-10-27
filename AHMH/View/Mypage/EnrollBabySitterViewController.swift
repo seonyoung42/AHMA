@@ -24,7 +24,7 @@ class EnrollBabySitterViewController: UIViewController, UIImagePickerControllerD
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(cgColor: CGColor(red: 254/255, green: 249/255, blue: 239/255, alpha: 1))
+        self.view.backgroundColor = UIColor(cgColor: CGColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1))
         
         self.imagePicker.delegate = self
         self.imagePicker.sourceType = .photoLibrary
@@ -35,7 +35,13 @@ class EnrollBabySitterViewController: UIViewController, UIImagePickerControllerD
         sitterImageVIew.isUserInteractionEnabled = true
 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "등록", style: .plain, target: self, action: #selector(enrollBabySitterToDB))
-        self.navigationItem.rightBarButtonItem?.isEnabled = false
+//        self.navigationItem.rightBarButtonItem?.isEnabled = false
+        
+        self.introductionTextView.layer.borderWidth = 0.5
+        self.introductionTextView.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.3).cgColor
+        self.introductionTextView.cornerRadius = 5
+        
+       
     }
     
     

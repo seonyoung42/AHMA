@@ -14,6 +14,7 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var locationTextField: UITextField!
     
     var locationManager: CLLocationManager = CLLocationManager()
+    var location = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,7 +98,7 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
         // 경도, 위도 값을 지역으로 변환
         let geocorder = CLGeocoder()
         let locale = Locale(identifier: "Ko-kr")
-        geocorder.reverseGeocodeLocation(first, preferredLocale: locale) { (placemarks, error) in
+        geocorder.reverseGeocodeLocation(first, preferredLocale: locale) { [self] (placemarks, error) in
             
             if error != nil {
                 print("Error in reverseGeocodeLocation")
@@ -114,6 +115,7 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
 //                self.location = "\(locality), \(administrativeArea), \(country)"
 //                self.location = "\(locality), \(administrativeArea)"
                 print("Address: \(locality), \(administrativeArea), \(country)")
+//                self.location = "\(locality), \(administrativeArea), \(country)"
                 self.locationTextField.text = "\(locality), \(administrativeArea), \(country)"
             }
         }

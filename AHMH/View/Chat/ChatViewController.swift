@@ -35,10 +35,10 @@ class ChatViewController: MessagesViewController {
         
        
         
-//        messages.append(Message(sender: currentUser,
-//                                messageId: "1",
-//                                sentDate: Date(),
-//                                kind: .text("Hello World message")))
+        messages.append(Message(sender: currentUser,
+                                messageId: "1",
+                                sentDate: Date(),
+                                kind: .text("안녕하세요!")))
 //        messages.append(Message(sender: currentUser,
 //                                messageId: "1",
 //                                sentDate: Date(),
