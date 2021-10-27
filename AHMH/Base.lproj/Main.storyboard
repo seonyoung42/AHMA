@@ -1154,13 +1154,51 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatListCell" id="jMq-Ly-Z87">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatListTableViewCell" rowHeight="102" id="jMq-Ly-Z87" customClass="ChatListTableViewCell" customModule="AHMH" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="102"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jMq-Ly-Z87" id="P2X-Hz-PTy">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="102"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImage5" translatesAutoresizingMaskIntoConstraints="NO" id="iIM-Ev-4sr">
+                                                    <rect key="frame" x="25" y="16" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="kLq-ii-pYS"/>
+                                                        <constraint firstAttribute="width" secondItem="iIM-Ev-4sr" secondAttribute="height" multiplier="1:1" id="qDV-Cq-rhH"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eAU-nK-Dbg">
+                                                    <rect key="frame" x="110" y="28" width="164" height="46"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장선영" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kn9-Zp-Qcf">
+                                                            <rect key="frame" x="0.0" y="0.0" width="164" height="21.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5시 시간 괜찮으실까요?..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18Q-vt-6XG">
+                                                            <rect key="frame" x="0.0" y="26.5" width="164" height="19.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="iIM-Ev-4sr" firstAttribute="leading" secondItem="P2X-Hz-PTy" secondAttribute="leadingMargin" constant="5" id="It4-gZ-b5W"/>
+                                                <constraint firstItem="eAU-nK-Dbg" firstAttribute="leading" secondItem="iIM-Ev-4sr" secondAttribute="trailing" constant="15" id="JuU-Rp-cfA"/>
+                                                <constraint firstItem="iIM-Ev-4sr" firstAttribute="top" secondItem="P2X-Hz-PTy" secondAttribute="topMargin" constant="5" id="KyI-pj-vk4"/>
+                                                <constraint firstItem="eAU-nK-Dbg" firstAttribute="centerY" secondItem="iIM-Ev-4sr" secondAttribute="centerY" id="RWY-lc-3WQ"/>
+                                                <constraint firstItem="iIM-Ev-4sr" firstAttribute="centerY" secondItem="P2X-Hz-PTy" secondAttribute="centerY" id="szk-RY-9cB"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="chatLabel" destination="18Q-vt-6XG" id="TaG-4u-uSo"/>
+                                            <outlet property="nameLabel" destination="kn9-Zp-Qcf" id="Tpq-cB-5Np"/>
+                                            <outlet property="profileImageView" destination="iIM-Ev-4sr" id="XJY-8b-ORo"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1181,7 +1219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SlD-YT-UvE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4836" y="840"/>
+            <point key="canvasLocation" x="4834.7826086956529" y="839.73214285714278"/>
         </scene>
         <!--User View Controller-->
         <scene sceneID="3zV-z8-hDJ">
@@ -1735,13 +1773,13 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Hlf-Bc-Sfm">
                                                     <rect key="frame" x="86" y="23" width="318" height="42.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="선영맘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yH0-oR-0Cm">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선영맘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yH0-oR-0Cm">
                                                             <rect key="frame" x="0.0" y="0.0" width="318" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="40분 전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRl-Qh-baa">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40분 전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRl-Qh-baa">
                                                             <rect key="frame" x="0.0" y="24.5" width="318" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" white="0.67000000000000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1885,6 +1923,7 @@
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="person.crop.circle.badge.questionmark" catalog="system" width="128" height="113"/>
         <image name="person.crop.square.fill.and.at.rectangle" catalog="system" width="128" height="93"/>
+        <image name="profileImage5" width="416" height="539"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
