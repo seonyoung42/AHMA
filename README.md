@@ -1,83 +1,66 @@
-# 👼🏻 AHMH
-> 제 4회 데이터 걸스데이 참여를 위해 개발한 아이디어이며 대상(행정안전부장관상)을 수상하였습니다.
+# 🍼 AHMH
+> AHMH is an iOS parenting app that provides location-based parenting information.
 > 
-> 서버를 제외한 UI 및 기능 개발이 완료되었습니다.
-> 
-<p float="left">
- <img src = "https://user-images.githubusercontent.com/77603632/147430352-f5aea310-383e-4fed-9782-e04f2126f655.jpeg" width="300" height="450">
-</p>
+> ⚠︎ This app is designed for participation in a competition, not for actual use.
+> + Development : 2021.11
+> + 🏆 won the Grand Prize(= the Minister of Public Administration and Security Award) at 'The 4th Data Girl's Day' ([link](https://www.data.go.kr/bbs/ntc/selectNotice.do?pageIndex=1&originId=NOTICE_0000000002197&atchFileId=FILE_000000002428442&searchCondition2=2&searchKeyword1=))
 
-## 🗣 App Desription
-+ AHMH란?
-> 아하마하는 위치를 기반으로 한 육아 정보를 통합하여 보여주는 육아 통합 플랫폼입니다.
-+ 개발 기간
-> 2021.11
-> 
+<br>
+
+## 🌟 Main Scenes
+
 ### - Onboarding Pages
 <img src = "https://user-images.githubusercontent.com/77603632/147429525-d0a3894e-b1bf-4a5c-95f9-1946cb752a54.gif" width="300" height="450">
 
-> + 앱 실행 시 온보딩 화면을 넣어 사용자가 해당 앱에서 제공되는 기능을 한 눈에 알 수 있습니다.
-> + 구글과 애플 계정 연동을 통해 추가적인 계정 생성없이 간편하게 로그인할 수 있습니다.
+> + With the onboarding screen, you can quickly grasp what the app offers.
+> + Link your Google and Apple accounts to log in effortlessly without creating an additional account.
+
+<br>
 
 ### - Home 
 <img src = "https://user-images.githubusercontent.com/77603632/147432121-3dcf3951-a85d-4529-86a0-d7f495dd7fdc.gif" width="300" height="450">
 
-> + 연령대 별 커뮤니티, 정부 지원책, 추천 도서 소개, 육아 컬럼 정보를 제공합니다.
+> + You can access various information such as community, parenting policies, parenting journals, and more.
 
+<br>
 
 ### - Parenting Information
 <img src = "https://user-images.githubusercontent.com/77603632/147430144-8b6ffd20-6d83-4639-ad46-80fc49f23957.gif" width="300" height="450">
 
-> + [공공데이터 포털](https://www.data.go.kr/index.do) 에서 제공하는 공동육아나눔터 및 공동육아방 정보를 사용자에게 제공합니다.
-> + 해당 놀이방의 상세정보(지도, 홈페이지, 운영 시간 등)을 제공합니다.
+> + Parenting support centers and shared parenting rooms sourced from the [Public Data Portal](https://www.data.go.kr/index.do)
+
+<br>
 
 ### - Baby Sitter 
 <img src = "https://user-images.githubusercontent.com/77603632/147430067-45d094a4-15b9-4662-a42d-2a9487e74e55.gif" width="300" height="450">
 
-> + 사용자 근처의 돌보미 목록을 보여줍니다.
-> + 돌보미 상세 정보를 볼 수 있고, 해당 돌보미와 채팅을 할 수 있습니다.
+> + List of babysitters based on your location.
+> + Chat directly with the babysitter.
+
+<br>
 
 ### - User page
 <img src = "https://user-images.githubusercontent.com/77603632/147429954-9ad3fdaa-1f64-4c2c-8c21-9b553ba99c6f.gif" width="300" height="450">
 
-> + 연동된 계정에서 사용자의 이름, 프로필 사진, 이메일 정보를 받아옵니다.
-> + 사용자의 위치 정보를 등록할 수 있습니다.
-> + 돌보미로 등록하고자 하는 사용자는 돌보미 등록 절차를 진행할 수 있습니다.
+> + Display personal information(name, picture, email-address) from the linked account.
+> + Register your location 
+> + Users who wish to register as babysitters can sign up as a babysitter.
 
+<br>
 
-## 🔎 Main Features
-#### 1. Login with Google, Apple accounts
-> + Firebase를 사용하여 계정을 따로 생성하지 않고 구글 및 애플 계정을 사용한 간편한 로그인
-> 
-#### 2. Location-based information system
-> + CLLocationManager를 사용하여 사용자의 위치 정보 받아옴
+## 📚 Libraries                                                                                                        
++ Firebase - 'Firebase/Core', 'Firebase/Database', 'Firebase/Firestore', 'Firebase/Storage'
++ GoogleSignIn
++ MessageKit
++ JGProgressHUD
 
-#### 3. Provids public data 
-> + [공공데이터 포털](https://www.data.go.kr/index.do) 의 공공데이터를 csv파일로 처리하여 사용자에게 제공
+<br>
 
-#### 4. Onboarding pages
-> + 앱 진입 시 온보딩 화면을 제공하여 사용자에게 해당 앱에서 제공하는 기능을 간략하게 알려줌
-
-#### 5. Connection with the web pages
-> + SFSafariViewController를 사용하여 웹페이지로 진입
-
+## 📝 Learned
++ how to implement a database (DB) using **Firebase**, enable simple login, and establish user data linkage.
++ how to use **Mapkit** and apply it to user location-based functions
++ how to parse and import resources (.csv) added to the app is correct.
++ how to use **WKWebView** and **SFSafariViewController** to display web pages within the app
 
 
 
-## 💻 Development Environment
-                                                                                                                                           
-1. Xcode version
-> + 12.5.1
-
-2. Swift version
-> + Swift 5
-                                                                                                                                   
-3. Open source
-> + Firebase - 'Firebase/Core', 'Firebase/Database', 'Firebase/Firestore', 'Firebase/Storage'
-> + GoogleSignIn
-> + MessageKit
-> + JGProgressHUD
-
-### 📝 추후 개선 예정
-+ Storyboard로 작성된 UI 코드로 작성
-+ MVVM 패턴 적용
